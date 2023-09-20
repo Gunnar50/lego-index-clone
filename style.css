@@ -1,5 +1,5 @@
 body {
-	font-family: "Open Sans";
+	font-family: "Open Sans", "Helvetica Neue";
 	margin: 0;
 	height: 1000px;
 }
@@ -12,6 +12,71 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+
+.flex-container {
+	display: flex;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* -------------- HEADER ------------- */
+
+header {
+	z-index: 50;
+}
+
+/* TOP SECTION */
+
+.top-section {
+	max-width: 100rem;
+	padding: 20px 20px;
+	justify-content: space-between;
+	font-size: 12px;
+}
+
+.play-zone {
+	background-color: rgb(171, 217, 255);
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.play-zone:hover {
+	background-color: #fff;
+}
+
+.play-zone i {
+	margin-right: 10px;
+}
+
+.promotion-tag a {
+	color: rgb(11, 117, 187);
+	margin-left: 10px;
+}
+
+.promotion-tag a:hover {
+	text-decoration: underline;
+}
+
+.sign-join {
+	height: 100%;
+}
+
+.user {
+	border-right: 1px solid black;
+	padding: 0 20px;
+	margin-right: 20px;
+}
+
+.user img,
+.join img {
+	margin-right: 8px;
+}
+
+/* MAIN NAV */
 
 .main-nav-container {
 	background-color: #ffcf00;
@@ -35,7 +100,7 @@ a {
 	margin-right: 30px;
 }
 
-.navbar {
+nav {
 	display: flex;
 }
 
