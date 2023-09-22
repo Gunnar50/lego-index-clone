@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Open Sans Test";
+	src: url();
+}
+
 body {
 	font-family: "Open Sans", "Helvetica Neue";
 	margin: 0;
@@ -83,26 +88,30 @@ header {
 }
 
 .main-bar {
-	height: 4.68rem;
-	display: flex;
+	/* height: 4.68rem; */
 	width: 100%;
 	max-width: 100rem;
 	align-items: center;
 }
 
 .navbar-links {
-	display: flex;
 	margin: 0;
-	align-items: center;
 }
 
 .nav-link {
 	margin-right: 30px;
 }
 
-nav {
-	display: flex;
+/* NAV CART */
+
+.fa-magnifying-glass {
+	font-size: 1.25em;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 50%;
 }
+
+/* HERO SECTION */
 
 .section {
 	max-width: 100rem;
