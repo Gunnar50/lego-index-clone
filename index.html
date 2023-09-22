@@ -19,16 +19,14 @@
 		<header>
 			<div class="mobile-header">
 				<!-- Mobile only top bar -->
-				<div class="top-bar-mobile">
+				<div class="top-bar-mobile flex-container">
 					<!-- Promotion tag -->
-					<div class="promotion-tag">
+					<div class="promotion-tag flex-center">
 						<i class="fa-solid fa-angle-left fa-2xl"></i>
-
-						<div class="promotion-text">
+						<div class="promotion-text flex-center">
 							<span>FREE delivery on orders above £50!*</span>
 							<a href="#">Learn more</a>
 						</div>
-
 						<i class="fa-solid fa-angle-right fa-2xl"></i>
 					</div>
 
@@ -39,30 +37,30 @@
 				</div>
 
 				<!-- Mobile only nav bar with burger menu -->
-				<div class="nav-container-mobile" style="display: none">
-					<div class="menu">Menu</div>
-					<div class="logo">
-						<img src="/images/brand-lego.svg" width="40" />
+				<nav class="nav-container-mobile flex-container">
+					<div class="burger-menu-container">
+						<div class="burger-menu"></div>
+						<span class="menu-text">MENU</span>
 					</div>
-					<div class="side-menu">
-						<div class="search-bar">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</div>
+					<a href="#" class="logo"><img src="/images/brand-lego.svg" /></a>
 
-						<a href="#" class="lego-head">
-							<img src="/images/lego-head.PNG" width="20" height="22" />
-						</a>
-
-						<div class="heart">
-							<i class="fa-regular fa-heart"></i>
-						</div>
-
-						<div class="cart flex-container">
-							<i class="fa-solid fa-bag-shopping"></i>
-							<span>(0)</span>
-						</div>
+					<div class="search-bar">
+						<i class="fa-solid fa-magnifying-glass"></i>
 					</div>
-				</div>
+
+					<a href="#" class="lego-head">
+						<img src="/images/lego-head.PNG" width="20" height="22" />
+					</a>
+
+					<div class="heart">
+						<i class="fa-regular fa-heart"></i>
+					</div>
+
+					<div class="cart">
+						<i class="fa-solid fa-bag-shopping"></i>
+						<span>0</span>
+					</div>
+				</nav>
 			</div>
 
 			<!-- Desktop only top bar -->
@@ -134,10 +132,11 @@
 			</div>
 		</header>
 
-		<!-- <main id="main">
-			<div class="section">
-				<section class="p-0">
+		<main id="main">
+			<div class="section hero-section">
+				<section>
 					<div class="banner-container">
+						<!-- Hero image -->
 						<a href="#">
 							<div class="hero-banner-image-holder">
 								<div class="hero-bg-image">
@@ -150,23 +149,24 @@
 								</div>
 							</div>
 						</a>
-						<div class="inside-hero-banner">
-							<img class="concorde-logo" src="images/concorde_logo_neg.png" />
-
-							<h2 class="banner-title">Iconic supersonic</h2>
-							<span class="banner-tagline">
-								Bring an aviation legend to life with new LEGO® Icons Concorde.
-							</span>
-							<div class="hero-banner-buttons">
-								<a href="#" class="banner-button">Shop now &gt;</a>
-								<a href="#" class="banner-button">Learn more &gt;</a>
-							</div>
+					</div>
+					<!-- Banner text -->
+					<div class="hero-text-container">
+						<h2 class="banner-title">It's a film. It's a game. Play it!</h2>
+						<span class="banner-tagline">
+							Use your play powers to crack the hidden codes.
+						</span>
+						<div class="hero-banner-button">
+							<a href="#" class="banner-button"
+								><span>Learn more</span>
+								<i class="fa-solid fa-angle-right fa-xl"></i
+							></a>
 						</div>
 					</div>
 				</section>
 			</div>
 
-			<div class="highlights section">
+			<!-- <div class="highlights section">
 				<section class="inner-container">
 					<div>
 						<ul>
@@ -177,7 +177,7 @@
 						</ul>
 					</div>
 				</section>
-			</div>
-		</main> -->
+			</div> -->
+		</main>
 	</body>
 </html>

@@ -3,8 +3,7 @@
 	src: url();
 }
 
-*,
-body {
+* {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
 	padding: 0;
@@ -13,6 +12,7 @@ body {
 
 body {
 	height: 1000px;
+	font-size: 12px;
 }
 
 ul {
@@ -40,14 +40,111 @@ header {
 	z-index: 50;
 }
 
-/* TOP SECTION */
+/* MOBILE HEADER */
+/* Mobile Top bar */
+.top-bar-mobile {
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgb(248, 248, 248);
+}
 
-.top-section {
+.promotion-tag i {
+	padding: 1rem;
+}
+
+.promotion-tag a {
+	color: rgb(11, 117, 187);
+	margin-left: 10px;
+}
+
+.promotion-tag a:hover {
+	text-decoration: underline;
+}
+
+.close {
+	padding: 1rem;
+}
+
+/* Mobile Navbar */
+
+/* Burger menu */
+.burger-menu-container {
+	position: absolute;
+	height: 0.4rem;
+	top: 0;
+	left: 0;
+	margin: 1rem 1rem;
+}
+
+.burger-menu {
+	width: 100%;
+	height: 100%;
+}
+
+.burger-menu::before {
+	position: absolute;
+	display: block;
+	content: "";
+	background-color: #000;
+	width: 100%;
+	height: 2px;
+	top: 50%;
+}
+
+.burger-menu::after {
+	position: absolute;
+	display: block;
+	content: "";
+	background-color: #000;
+	width: 100%;
+	height: 2px;
+	top: 50%;
+	transform: translateY(200%);
+	margin-bottom: 20px;
+}
+
+.menu-text {
+	font-size: 0.4rem;
+}
+
+.nav-container-mobile {
+	padding: 0 1rem;
+	gap: 20px;
+	align-items: center;
+	justify-content: end;
+	position: relative;
+	height: 3rem;
+}
+
+.logo {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 4rem;
+}
+
+.logo img {
+	width: 40px;
+}
+
+.nav-container-mobile i {
+	font-size: 1.25rem;
+}
+
+/* Other things */
+/* .top-section {
 	max-width: 100rem;
 	padding: 20px 20px;
 	justify-content: space-between;
 	font-size: 12px;
-}
+} */
+
+/* .fa-magnifying-glass {
+	font-size: 1.25em;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 50%;
+} */
 
 .play-zone {
 	background-color: rgb(171, 217, 255);
@@ -61,15 +158,6 @@ header {
 
 .play-zone i {
 	margin-right: 10px;
-}
-
-.promotion-tag a {
-	color: rgb(11, 117, 187);
-	margin-left: 10px;
-}
-
-.promotion-tag a:hover {
-	text-decoration: underline;
 }
 
 .sign-join {
@@ -110,19 +198,17 @@ header {
 
 /* NAV CART */
 
-.fa-magnifying-glass {
-	font-size: 1.25em;
-	background-color: #fff;
-	padding: 10px;
-	border-radius: 50%;
-}
-
 /* HERO SECTION */
 
 .section {
 	max-width: 100rem;
 	margin: 0px auto;
 	background-color: white;
+}
+
+.hero-section {
+	background-color: #fdbf0f;
+	text-align: center;
 }
 
 .hero-image {
@@ -134,62 +220,32 @@ header {
 	position: relative;
 }
 
-.inside-hero-banner {
-	position: absolute;
-	background-color: transparent;
-	z-index: 1;
-	padding: 0px;
-	color: white;
-	left: 6.8rem;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.concorde-logo {
-	max-width: 9rem;
-	max-height: 3rem;
-	object-fit: cover;
-	width: auto;
-	height: auto;
-	margin-bottom: 0.9rem;
+.hero-text-container {
+	padding: 1.2rem;
 }
 
 .banner-title {
-	font-size: 2.5rem;
-	line-height: 3.125rem;
-	margin: 0px;
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 .banner-tagline {
 	display: block;
-	font-size: 1.125rem;
+	font-size: 0.9rem;
 	line-height: 1.75rem;
 	margin-top: 0.9rem;
 }
 
-.hero-banner-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin: 0px -0.6rem;
+.hero-banner-button {
+	margin: 20px 0;
 }
 
 .banner-button {
-	margin-top: 1.25rem;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 0.9rem;
 	padding: 0.6rem 0.9rem;
-
-	width: auto;
-	border: 1px solid transparent;
-	border-collapse: collapse;
-	color: black;
-	background-color: white;
+	color: #fff;
+	background-color: #000;
 	border-radius: 4px;
-	text-transform: none;
-	text-decoration: none;
-	margin-left: 0.6rem;
-	margin-right: 0.6rem;
 }
 
 .banner-button:hover {
