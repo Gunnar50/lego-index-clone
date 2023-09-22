@@ -17,19 +17,73 @@
 	</head>
 	<body>
 		<header>
-			<div>
-				<div class="top-section flex-container">
-					<div>
-						<a href="#" class="play-zone">
-							<span class="play-button"
-								><i class="fa-solid fa-arrow-left-long"></i>PLAY ZONE</span
-							>
-						</a>
+			<div class="mobile-header">
+				<!-- Mobile only top bar -->
+				<div class="top-bar-mobile">
+					<!-- Promotion tag -->
+					<div class="promotion-tag">
+						<i class="fa-solid fa-angle-left fa-2xl"></i>
+
+						<div class="promotion-text">
+							<span>FREE delivery on orders above £50!*</span>
+							<a href="#">Learn more</a>
+						</div>
+
+						<i class="fa-solid fa-angle-right fa-2xl"></i>
 					</div>
 
+					<!-- Close button for closing the top bar -->
+					<div class="close">
+						<i class="fa-solid fa-xmark fa-2xl"></i>
+					</div>
+				</div>
+
+				<!-- Mobile only nav bar with burger menu -->
+				<div class="nav-container-mobile" style="display: none">
+					<div class="menu">Menu</div>
+					<div class="logo">
+						<img src="/images/brand-lego.svg" width="40" />
+					</div>
+					<div class="side-menu">
+						<div class="search-bar">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</div>
+
+						<a href="#" class="lego-head">
+							<img src="/images/lego-head.PNG" width="20" height="22" />
+						</a>
+
+						<div class="heart">
+							<i class="fa-regular fa-heart"></i>
+						</div>
+
+						<div class="cart flex-container">
+							<i class="fa-solid fa-bag-shopping"></i>
+							<span>(0)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Desktop only top bar -->
+			<div class="desktop-header" style="display: none">
+				<div class="top-bar-desktop">
+					<a href="#" class="play-zone">
+						<span class="play-button">
+							<i class="fa-solid fa-arrow-left-long"></i>
+							PLAY ZONE
+						</span>
+					</a>
+
 					<div class="promotion-tag">
-						<span>FREE delivery on orders above £50!*</span>
-						<a href="#">Learn more</a>
+						<i class="fa-solid fa-angle-left fa-2xl"></i>
+
+						<div class="promotion-text">
+							<span>FREE delivery on orders above £50!*</span>
+							<a href="#">Learn more</a>
+						</div>
+
+						<i class="fa-solid fa-angle-right fa-2xl"></i>
 					</div>
 
 					<div class="flex-center sign-join">
@@ -49,19 +103,18 @@
 					</div>
 				</div>
 
-				<div class="main-nav-container flex-container">
-					<div class="main-bar flex-container">
-						<nav class="navbar flex-container">
-							<a href="/" class="brand">
-								<img src="/images/brand-lego.svg" width="55" />
-							</a>
-							<ul class="navbar-links flex-center">
-								<li class="nav-link"><a href="#">SHOP</a></li>
-								<li class="nav-link"><a href="#">DISCOVER</a></li>
-								<li class="nav-link"><a href="#">HELP</a></li>
-							</ul>
-						</nav>
-					</div>
+				<!-- Desktop only nav bar -->
+				<div class="desktop-nav-container flex-container">
+					<nav class="navbar flex-container">
+						<a href="/" class="brand">
+							<img src="/images/brand-lego.svg" width="55" />
+						</a>
+						<ul class="navbar-links flex-center">
+							<li class="nav-link"><a href="#">SHOP</a></li>
+							<li class="nav-link"><a href="#">DISCOVER</a></li>
+							<li class="nav-link"><a href="#">HELP</a></li>
+						</ul>
+					</nav>
 
 					<div class="cart-container flex-container">
 						<div class="search-bar">
@@ -81,7 +134,7 @@
 			</div>
 		</header>
 
-		<main id="main">
+		<!-- <main id="main">
 			<div class="section">
 				<section class="p-0">
 					<div class="banner-container">
@@ -125,6 +178,6 @@
 					</div>
 				</section>
 			</div>
-		</main>
+		</main> -->
 	</body>
 </html>
