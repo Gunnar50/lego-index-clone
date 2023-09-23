@@ -275,29 +275,62 @@ header {
 }
 
 /* RECOMMENDATIONS SECTION */
+.section-title {
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.recommendation-container {
+	margin: 1rem 0;
+	overflow-x: scroll;
+	width: calc(100% + 1.25rem);
+	transform: translateX(-1.25rem);
+	padding-bottom: 2rem;
+}
+
+.recommendation-container ul li {
+	flex-shrink: 0;
+	width: 75%;
+	margin-left: -1.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.recommendation-container ul li:first-child {
+	padding-left: 1.25rem;
+	margin-left: 0;
+}
+
+.recommendation-container ul li:last-child {
+	padding-right: 1.25rem;
+}
+
 .recommendation {
 	margin-top: 5rem;
 	margin-left: 1rem;
 }
-.card {
-	width: 75%;
+
+.card-details {
+	margin-top: 0.2rem;
+	flex-direction: column;
 }
 
 .favourite {
 	position: absolute;
-	top: 0.5rem;
-	left: 0.5rem;
+	top: 0.6rem;
+	left: 0.6rem;
 }
 
 .favourite i {
 	background-color: #dddddd5a;
 	border-radius: 50%;
-	padding: 0.2rem;
+	font-size: 1rem;
+	padding: 0.4rem;
 	color: #3473e7;
 }
 
 .card .img-area {
-	border: 1px solid #ccc;
+	border: 1px solid #ccccccbb;
 	position: relative;
 	height: 100%;
 	display: flex;
@@ -306,6 +339,7 @@ header {
 .img-area img {
 	width: 100%;
 	position: absolute;
+	padding: 0 1rem;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -320,29 +354,39 @@ header {
 	background-color: #ffcf00;
 	padding: 0.2rem 0.6rem;
 	position: absolute;
-	bottom: 0.5rem;
-	left: 0.5rem;
+	bottom: 0.6rem;
+	left: 0.6rem;
 }
 
 .card-title {
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 0.9rem;
+	padding: 0.4rem 0;
 }
 
 .stars img {
 	width: 15px;
 	height: 15px;
+	margin-top: 1.5rem;
 }
 
 .card-price {
+	display: block;
 	font-size: 1rem;
 	font-weight: 700;
+	margin: 0.4rem 0;
 }
 
 .card-order-button {
 	background-color: #fd8024;
 	width: 100%;
 	padding: 1rem;
+	font-size: 0.85rem;
 	font-weight: 600;
 	border-radius: 5px;
 	text-align: center;
+}
+
+img[class="two-lines"] {
+	margin-top: 0.35rem;
 }
