@@ -14,6 +14,12 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
@@ -133,51 +139,126 @@
 		</header>
 
 		<main id="main">
-			<div class="section hero-section">
-				<section>
-					<div class="banner-container">
-						<!-- Hero image -->
-						<a href="#">
-							<div class="hero-banner-image-holder">
-								<div class="hero-bg-image">
-									<picture class="product-image">
-										<img
-											class="hero-image"
-											src="images/10318-Page-202309-Hero-Standard-Large-1.webp"
-										/>
-									</picture>
-								</div>
+			<section class="section hero-section">
+				<div class="banner-container">
+					<!-- Hero image -->
+					<a href="#">
+						<div class="hero-banner-image-holder">
+							<div class="hero-bg-image">
+								<picture class="product-image">
+									<img
+										class="hero-image"
+										src="images/10318-Page-202309-Hero-Standard-Large-1.webp"
+									/>
+								</picture>
 							</div>
-						</a>
-					</div>
-					<!-- Banner text -->
-					<div class="hero-text-container">
-						<h2 class="banner-title">It's a film. It's a game. Play it!</h2>
-						<span class="banner-tagline">
-							Use your play powers to crack the hidden codes.
-						</span>
-						<div class="hero-banner-button">
-							<a href="#" class="banner-button"
-								><span>Learn more</span>
-								<i class="fa-solid fa-angle-right fa-xl"></i
-							></a>
 						</div>
+					</a>
+				</div>
+				<!-- Banner text -->
+				<div class="hero-text-container">
+					<h2 class="banner-title">It's a film. It's a game. Play it!</h2>
+					<span class="banner-tagline">
+						Use your play powers to crack the hidden codes.
+					</span>
+					<div class="hero-banner-button">
+						<a href="#" class="banner-button"
+							><span>Learn more</span>
+							<i class="fa-solid fa-angle-right fa-xl"></i
+						></a>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 
-			<!-- <div class="highlights section">
-				<section class="inner-container">
-					<div>
-						<ul>
-							<li class="product-highlight">
-								<img src="images/novelty-2020-06-Quicklink.webp" />
-								<span>New</span>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div> -->
+			<!-- QUICK LINKS SECTION -->
+			<section class="section quick-links">
+				<ul class="flex-center">
+					<li class="product-quick-links">
+						<a href="#">
+							<div>
+								<img src="./images/novelty-2020-06-Quicklink.webp" />
+							</div>
+							<span>New</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/Exclusive-Quicklink.png" /></div>
+							<span>Exclusives</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/offers-Quicklink.png" /></div>
+							<span>Offers</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/Ninjago-Quicklink-Arin.png" /></div>
+							<span>NINJAGO&reg;</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/marvel-Quicklink.png" /></div>
+							<span>Marvel</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/pumpkim-Home-Quicklink.gif" /></div>
+							<span>Halloween</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div>
+								<img src="./images/Homepage-dreams-Quicklink.png" />
+							</div>
+							<span>LEGO&reg;<br />DREAMZzz&trade;</span>
+						</a>
+					</li>
+					<li class="product-quick-links">
+						<a href="#">
+							<div><img src="./images/Insiders-Quicklink.png" /></div>
+							<span>Insiders</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- RECOMMENDATION SECTION -->
+			<section class="section recommendation">
+				<h2>Recommended For You</h2>
+				<div class="recommentation-container">
+					<ul>
+						<li>
+							<div class="card">
+								<div class="img-area">
+									<div class="favourite">
+										<i class="fa-regular fa-heart"></i>
+									</div>
+									<a href="#">
+										<img src="./images/recommendations/concorde-10318.png"
+									/></a>
+									<span class="card-new"> New </span>
+								</div>
+								<h3 class="card-title">Concorde</h3>
+								<div class="stars flex-container">
+									<img src="./images/recommendations/starActive.svg" />
+									<img src="./images/recommendations/starActive.svg" />
+									<img src="./images/recommendations/starActive.svg" />
+									<img src="./images/recommendations/starActive.svg" />
+									<img src="./images/recommendations/starActive.svg" />
+								</div>
+								<span class="card-price">£169.99</span>
+								<div class="card-order-button">Back order</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
