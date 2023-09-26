@@ -26,7 +26,6 @@
 }
 
 body {
-	height: 8000px;
 	font-size: 12px;
 }
 
@@ -654,6 +653,9 @@ img[class="two-lines"] {
 }
 
 // FOOTER
+footer {
+	background-color: #201d48;
+}
 .footer-links {
 	background-color: #201d48;
 	color: #fff;
@@ -790,5 +792,49 @@ img[class="two-lines"] {
 				text-decoration: underline;
 			}
 		}
+	}
+}
+
+// SOCIALS
+.footer-social {
+	color: #fff;
+	padding: 2rem 1.5rem;
+	font-weight: 400;
+	h3 {
+		margin-bottom: 1.5rem;
+	}
+	.social-icons {
+		gap: 20px;
+		i {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			background-color: #121029;
+			padding: 10px;
+			border-radius: 50%;
+			font-size: 1.1rem;
+		}
+	}
+}
+
+// LEGAL STUFF
+.footer-legal {
+	padding: 1.5rem;
+	ul {
+		gap: 20px;
+		flex-wrap: wrap;
+		a {
+			color: #fff;
+			&hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	p {
+		margin-top: 5rem;
+		margin-bottom: 2rem;
+		color: #fff;
 	}
 }
