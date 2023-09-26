@@ -588,4 +588,80 @@ img[class=two-lines] {
 }
 .tagline-content p a:hover {
   text-decoration: underline;
+}
+
+.footer-links {
+  background-color: #201d48;
+  color: #fff;
+}
+
+.region {
+  padding: 1.25rem;
+}
+.region .links a {
+  display: block;
+  color: inherit;
+  padding: 0.6rem 0;
+}
+.region .links a:hover {
+  text-decoration: underline;
+}
+
+.country {
+  margin-bottom: 1rem;
+}
+.country img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right: 1rem;
+}
+.country a {
+  margin-bottom: 1.9rem;
+  align-items: center;
+  background-color: #18152d;
+  color: #fff;
+  padding: 0.5rem;
+}
+.country a span {
+  margin-left: 0.5rem;
+}
+
+.email-subscription {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+.email-subscription h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.email-subscription label {
+  position: relative;
+  flex-grow: 1;
+}
+.email-subscription label input {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 3rem;
+  padding: 1rem 1.25rem 0;
+}
+.email-subscription label input:focus {
+  outline: none;
+}
+.email-subscription label input:focus + span {
+  top: 0.5rem;
+  left: 1.4rem;
+  font-size: 0.6rem;
+}
+.email-subscription label span {
+  position: absolute;
+  color: #888;
+  top: 0.9rem;
+  left: 1rem;
+  transition: all 100ms ease-in-out;
+}
+.email-subscription a {
+  background-color: #fd8024;
+  padding: 1rem;
+  border-radius: 0 5px 5px 0;
 }/*# sourceMappingURL=style.css.map */
