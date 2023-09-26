@@ -1,3 +1,23 @@
+@mixin footer-dropdown($max-height) {
+	&:checked + label {
+		i {
+			transition: transform 100ms linear;
+			transform: rotate(180deg);
+		}
+	}
+
+	&:checked {
+		& ~ .dropdown-content {
+			max-height: $max-height;
+			transition: all 100ms linear;
+			ul {
+				transform: translateY(0%);
+				transition: all 100ms linear;
+			}
+		}
+	}
+}
+
 * {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
@@ -642,6 +662,7 @@ img[class="two-lines"] {
 	padding: 1.25rem;
 	.links {
 		a {
+			font-size: 0.9rem;
 			display: block;
 			color: inherit;
 			padding: 0.6rem 0;
@@ -690,7 +711,7 @@ img[class="two-lines"] {
 				outline: none;
 				& + span {
 					top: 0.5rem;
-					left: 1.4rem;
+					left: 1.3rem;
 					font-size: 0.6rem;
 				}
 			}
@@ -707,5 +728,67 @@ img[class="two-lines"] {
 		background-color: #fd8024;
 		padding: 1rem;
 		border-radius: 0 5px 5px 0;
+	}
+}
+
+.button-wrapper {
+	position: relative;
+	width: 100%;
+	border-top: 1px solid #fff;
+	&:last-child {
+		border-bottom: 1px solid #fff;
+	}
+	.dropdown-button {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+	#dropdown-about-button {
+		@include footer-dropdown(400px);
+	}
+	#dropdown-support-button {
+		@include footer-dropdown(400px);
+	}
+	#dropdown-attractions-button {
+		@include footer-dropdown(200px);
+	}
+	#dropdown-more-button {
+		@include footer-dropdown(400px);
+	}
+	label {
+		cursor: pointer;
+		padding: 1.5rem;
+		flex-direction: column;
+		h2 {
+			justify-content: space-between;
+			align-items: center;
+			i {
+				transition: transform 100ms linear;
+			}
+		}
+	}
+	.dropdown-content {
+		width: 100%;
+		overflow: hidden;
+		max-height: 0;
+		transition: all 100ms linear;
+		ul {
+			transform: translateY(-100%);
+			transition: all 100ms linear;
+		}
+		li {
+			padding: 1rem 1.5rem;
+			border-top: 1px solid #fff;
+			&:last-child {
+				border-bottom: 1px solid #fff;
+			}
+		}
+		a {
+			width: 100%;
+			color: inherit;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
