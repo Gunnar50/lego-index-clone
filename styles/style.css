@@ -599,6 +599,7 @@ img[class=two-lines] {
   padding: 1.25rem;
 }
 .region .links a {
+  font-size: 0.9rem;
   display: block;
   color: inherit;
   padding: 0.6rem 0;
@@ -650,7 +651,7 @@ img[class=two-lines] {
 }
 .email-subscription label input:focus + span {
   top: 0.5rem;
-  left: 1.4rem;
+  left: 1.3rem;
   font-size: 0.6rem;
 }
 .email-subscription label span {
@@ -664,4 +665,102 @@ img[class=two-lines] {
   background-color: #fd8024;
   padding: 1rem;
   border-radius: 0 5px 5px 0;
+}
+
+.button-wrapper {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+.button-wrapper:last-child {
+  border-bottom: 1px solid #fff;
+}
+.button-wrapper .dropdown-button {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.button-wrapper #dropdown-about-button:checked + label i {
+  transition: transform 100ms linear;
+  transform: rotate(180deg);
+}
+.button-wrapper #dropdown-about-button:checked ~ .dropdown-content {
+  max-height: 400px;
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-about-button:checked ~ .dropdown-content ul {
+  transform: translateY(0%);
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-support-button:checked + label i {
+  transition: transform 100ms linear;
+  transform: rotate(180deg);
+}
+.button-wrapper #dropdown-support-button:checked ~ .dropdown-content {
+  max-height: 400px;
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-support-button:checked ~ .dropdown-content ul {
+  transform: translateY(0%);
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-attractions-button:checked + label i {
+  transition: transform 100ms linear;
+  transform: rotate(180deg);
+}
+.button-wrapper #dropdown-attractions-button:checked ~ .dropdown-content {
+  max-height: 200px;
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-attractions-button:checked ~ .dropdown-content ul {
+  transform: translateY(0%);
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-more-button:checked + label i {
+  transition: transform 100ms linear;
+  transform: rotate(180deg);
+}
+.button-wrapper #dropdown-more-button:checked ~ .dropdown-content {
+  max-height: 400px;
+  transition: all 100ms linear;
+}
+.button-wrapper #dropdown-more-button:checked ~ .dropdown-content ul {
+  transform: translateY(0%);
+  transition: all 100ms linear;
+}
+.button-wrapper label {
+  cursor: pointer;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+.button-wrapper label h2 {
+  justify-content: space-between;
+  align-items: center;
+}
+.button-wrapper label h2 i {
+  transition: transform 100ms linear;
+}
+.button-wrapper .dropdown-content {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 100ms linear;
+}
+.button-wrapper .dropdown-content ul {
+  transform: translateY(-100%);
+  transition: all 100ms linear;
+}
+.button-wrapper .dropdown-content li {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #fff;
+}
+.button-wrapper .dropdown-content li:last-child {
+  border-bottom: 1px solid #fff;
+}
+.button-wrapper .dropdown-content a {
+  width: 100%;
+  color: inherit;
+}
+.button-wrapper .dropdown-content a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
