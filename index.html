@@ -25,48 +25,72 @@
 		<header>
 			<div class="mobile-header">
 				<!-- Mobile only top bar -->
-				<div class="top-bar-mobile flex-container">
-					<!-- Promotion tag -->
-					<div class="promotion-tag flex-center">
-						<i class="fa-solid fa-angle-left fa-2xl"></i>
-						<div class="promotion-text flex-center">
-							<span>FREE delivery on orders above £50!*</span>
-							<a href="#">Learn more</a>
+				<div>
+					<input
+						type="checkbox"
+						id="close-button"
+						class="top-close-button checkbox-button-general"
+					/>
+					<div class="top-bar-mobile flex-container">
+						<!-- Promotion tag -->
+						<div class="promotion-tag flex-center">
+							<i class="fa-solid fa-angle-left fa-2xl"></i>
+							<div class="promotion-text flex-center">
+								<span>FREE delivery on orders above £50!*</span>
+								<a href="#">Learn more</a>
+							</div>
+							<i class="fa-solid fa-angle-right fa-2xl"></i>
+							<!-- <button>
+								<img src="./images/svg/arrow-right.svg" />
+							</button> -->
 						</div>
-						<i class="fa-solid fa-angle-right fa-2xl"></i>
-					</div>
 
-					<!-- Close button for closing the top bar -->
-					<div class="close">
-						<i class="fa-solid fa-xmark fa-2xl"></i>
+						<!-- Close button for closing the top bar -->
+						<div class="close">
+							<label for="close-button">
+								<i class="fa-solid fa-xmark fa-2xl"></i
+							></label>
+						</div>
 					</div>
 				</div>
 
 				<!-- Mobile only nav bar with burger menu -->
-				<nav class="nav-container-mobile flex-container">
-					<div class="burger-menu-container">
-						<div class="burger-menu"></div>
-						<span class="menu-text">MENU</span>
+				<div>
+					<input
+						id="burger-menu"
+						class="burger-menu-input checkbox-button-general"
+						type="checkbox"
+					/>
+					<!-- Nav Opened -->
+					<div class="nav-open"></div>
+					<!-- Nav Closed -->
+					<div class="nav-closed">
+						<nav class="nav-container-mobile flex-container">
+							<label for="burger-menu">
+								<div class="burger-menu-container menu-open">
+									<span class="menu-text">MENU</span>
+									<div class="burger">
+										<div class="burger-menu"></div>
+									</div>
+								</div>
+							</label>
+							<a href="#" class="logo"><img src="/images/brand-lego.svg" /></a>
+							<div class="search-bar">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</div>
+							<a href="#" class="lego-head">
+								<img src="/images/lego-head.PNG" width="20" height="22" />
+							</a>
+							<div class="heart">
+								<i class="fa-regular fa-heart"></i>
+							</div>
+							<div class="cart">
+								<i class="fa-solid fa-bag-shopping"></i>
+								<span>0</span>
+							</div>
+						</nav>
 					</div>
-					<a href="#" class="logo"><img src="/images/brand-lego.svg" /></a>
-
-					<div class="search-bar">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</div>
-
-					<a href="#" class="lego-head">
-						<img src="/images/lego-head.PNG" width="20" height="22" />
-					</a>
-
-					<div class="heart">
-						<i class="fa-regular fa-heart"></i>
-					</div>
-
-					<div class="cart">
-						<i class="fa-solid fa-bag-shopping"></i>
-						<span>0</span>
-					</div>
-				</nav>
+				</div>
 			</div>
 
 			<!-- Desktop only top bar -->
@@ -147,23 +171,29 @@
 						<div class="hero-banner-image-holder">
 							<div class="hero-bg-image">
 								<picture class="product-image">
-									<img
-										class="hero-image"
-										src="images/10318-Page-202309-Hero-Standard-Large-1.webp"
-									/>
+									<img class="hero-image" src="images/pocusherosmall.webp" />
 								</picture>
+								<img
+									class="hero-logo"
+									src="/images/disney-hocus-pocus-logo.png"
+								/>
 							</div>
 						</div>
 					</a>
 				</div>
 				<!-- Banner text -->
 				<div class="hero-text-container">
-					<h2 class="banner-title">It's a film. It's a game. Play it!</h2>
+					<h2 class="banner-title">The magic is brewing</h2>
 					<span class="banner-tagline">
-						Use your play powers to crack the hidden codes.
+						Conjure up the fun with new Hocus Pocus: The Sanderson Sisters'
+						Cottage.
 					</span>
-					<div class="hero-banner-button">
-						<a href="#" class="banner-button black-button"
+					<div class="hero-banner-button flex-container">
+						<a href="#" class="banner-button white-button"
+							><span>Shop now</span>
+							<i class="fa-solid fa-angle-right fa-xl"></i
+						></a>
+						<a href="#" class="banner-button white-button"
 							><span>Learn more</span>
 							<i class="fa-solid fa-angle-right fa-xl"></i
 						></a>
@@ -950,7 +980,7 @@
 								<input
 									type="checkbox"
 									id="dropdown-about-button"
-									class="dropdown-button"
+									class="dropdown-button checkbox-button-general"
 								/>
 								<label for="dropdown-about-button" class="flex-container">
 									<h2 class="flex-container">
@@ -976,7 +1006,7 @@
 								<input
 									type="checkbox"
 									id="dropdown-support-button"
-									class="dropdown-button"
+									class="dropdown-button checkbox-button-general"
 								/>
 								<label for="dropdown-support-button" class="flex-container">
 									<h2 class="flex-container">
@@ -1002,7 +1032,7 @@
 								<input
 									type="checkbox"
 									id="dropdown-attractions-button"
-									class="dropdown-button"
+									class="dropdown-button checkbox-button-general"
 								/>
 								<label for="dropdown-attractions-button" class="flex-container">
 									<h2 class="flex-container">
@@ -1024,7 +1054,7 @@
 								<input
 									type="checkbox"
 									id="dropdown-more-button"
-									class="dropdown-button"
+									class="dropdown-button checkbox-button-general"
 								/>
 								<label for="dropdown-more-button" class="flex-container">
 									<h2 class="flex-container">
