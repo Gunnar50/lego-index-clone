@@ -35,12 +35,40 @@ a {
 
 .banner-button span {
   margin-right: 0.6rem;
+  line-height: 1.5;
 }
 
 .checkbox-button-general {
   position: absolute;
   opacity: 0;
   z-index: -1;
+}
+
+.svg {
+  display: block;
+}
+.svg.left-arrow {
+  transform: rotate(180deg);
+}
+
+.svg-12 {
+  height: 12px;
+}
+
+.svg-14 {
+  height: 14px;
+}
+
+.svg-16 {
+  height: 16px;
+}
+
+.svg-18 {
+  height: 18px;
+}
+
+.svg-22 {
+  height: 22px;
 }
 
 /* -------------- HEADER ------------- */
@@ -53,12 +81,12 @@ header {
 .top-bar-mobile {
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 1rem;
   background-color: rgb(248, 248, 248);
 }
 
-.promotion-tag i {
-  padding: 1rem;
+.promotion-tag {
+  gap: 2rem;
 }
 .promotion-tag a {
   color: rgb(11, 117, 187);
@@ -103,7 +131,7 @@ header {
   height: 2px;
   top: 50%;
   transform: translateY(-200%);
-  transition: transform 1s ease-out;
+  transition: transform 300ms ease-out;
 }
 .burger-menu::after {
   position: absolute;
@@ -114,26 +142,50 @@ header {
   height: 2px;
   top: 50%;
   margin-bottom: 20px;
-  animation: reverseRotate 1s forwards;
+  animation: reverseRotate 300ms forwards;
 }
 
 .menu-text {
+  position: absolute;
+  left: 15px;
+  top: 15px;
   display: block;
   font-size: 0.5rem;
   margin-top: 15px;
+  transition: all 100ms ease-out;
+  transform: scale(1);
+  z-index: 6;
 }
 
-.burger-menu-input:checked ~ .nav-container-mobile label {
-  left: auto;
+body:has(.burger-menu-input:checked) {
+  overflow: hidden;
 }
-.burger-menu-input:checked ~ .nav-container-mobile .burger {
-  transform: translateX();
+
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile .menu-text {
+  z-index: 5;
+  top: -45px;
+  left: 30px;
+  transform: scale(2);
+  transition: all 100ms ease-out;
 }
-.burger-menu-input:checked ~ .nav-container-mobile .burger-menu::after {
-  animation: rotate405 1s ease-out forwards;
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile label {
+  left: 90%;
+  top: -40px;
+  transition: all 300ms ease-out;
 }
-.burger-menu-input:checked ~ .nav-container-mobile .burger-menu::before {
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile label:has(.top-close-button:checked) {
+  top: 7px;
+}
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile .burger-menu::after {
+  animation: rotate405 300ms ease-out forwards;
+}
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile .burger-menu::before {
+  transition: all 300ms ease-out forwards;
   transform: rotate(135deg);
+}
+.burger-menu-input:checked ~ .nav-open {
+  transition: all 300ms ease-out;
+  transform: translate(0%);
 }
 
 @keyframes rotate405 {
@@ -152,6 +204,65 @@ header {
     transform: rotate(0deg);
   }
 }
+.nav-open {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-out;
+}
+
+.nav-open-top {
+  border-bottom: 3px solid #ffcf00;
+}
+.nav-open-top img {
+  opacity: 0;
+  margin: 1.1rem;
+  transform: rotate(180deg);
+}
+
+.nav-open-play-button {
+  background-color: #abd9ff;
+  margin: 0.4rem 1.1rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(8, 65, 111, 0.5960784314);
+  border-bottom: 2px solid rgba(66, 121, 163, 0.4666666667);
+}
+.nav-open-play-button img {
+  width: 15px;
+  margin-right: 0.5rem;
+}
+
+.nav-open-link-section {
+  padding-top: 1.1rem;
+  font-weight: 500;
+}
+.nav-open-link-section .main {
+  margin-top: 1.2rem;
+}
+.nav-open-link-section .main a {
+  font-size: 0.9rem;
+  justify-content: space-between;
+}
+.nav-open-link-section .secondary a {
+  font-size: 0.7rem;
+}
+.nav-open-link-section li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3568627451);
+}
+.nav-open-link-section li a {
+  justify-content: start;
+  padding: 0.95rem 1.2rem;
+}
+.nav-open-link-section li a img {
+  margin-right: 1rem;
+}
+
 .nav-container-mobile {
   padding: 0 1rem;
   gap: 20px;
@@ -165,7 +276,8 @@ header {
   position: absolute;
   left: 0;
   top: 0;
-  transition: left 1s linear;
+  z-index: 6;
+  transition: all 300ms ease-out;
 }
 .nav-container-mobile i {
   font-size: 1.25rem;
@@ -485,7 +597,7 @@ img[class=two-lines] {
   text-align: center;
 }
 
-.halloween-hero-container img {
+.halloween-hero-container > img {
   display: block;
   width: 100%;
 }
@@ -597,7 +709,7 @@ img[class=two-lines] {
   background-color: #00a3e7;
 }
 
-.disney-hero-container img {
+.disney-hero-container > img {
   display: block;
   width: 100%;
 }
@@ -644,7 +756,8 @@ img[class=two-lines] {
   font-weight: 500;
 }
 .read-more span {
-  margin-right: 0.4rem;
+  margin-right: 0.5rem;
+  line-height: 1.5;
 }
 .read-more:hover {
   text-decoration: underline;
