@@ -26,30 +26,32 @@
 			<div class="mobile-header">
 				<!-- Mobile only top bar -->
 				<div>
-					<input
+					<!-- <input
 						type="checkbox"
 						id="close-button"
 						class="top-close-button checkbox-button-general"
-					/>
+					/> -->
 					<div class="top-bar-mobile flex-container">
 						<!-- Promotion tag -->
 						<div class="promotion-tag flex-center">
-							<i class="fa-solid fa-angle-left fa-2xl"></i>
+							<img
+								class="svg svg-18 left-arrow"
+								src="./images/svg/arrow-right.svg"
+							/>
+
 							<div class="promotion-text flex-center">
 								<span>FREE delivery on orders above £50!*</span>
 								<a href="#">Learn more</a>
 							</div>
-							<i class="fa-solid fa-angle-right fa-2xl"></i>
-							<!-- <button>
-								<img src="./images/svg/arrow-right.svg" />
-							</button> -->
+
+							<img class="svg svg-18" src="./images/svg/arrow-right.svg" />
 						</div>
 
 						<!-- Close button for closing the top bar -->
 						<div class="close">
 							<label for="close-button">
-								<i class="fa-solid fa-xmark fa-2xl"></i
-							></label>
+								<img class="svg svg-18" src="./images/svg/close.svg" />
+							</label>
 						</div>
 					</div>
 				</div>
@@ -62,13 +64,72 @@
 						type="checkbox"
 					/>
 					<!-- Nav Opened -->
-					<div class="nav-open"></div>
+					<div class="nav-open">
+						<div class="nav-open-top">
+							<img class="svg svg-14" src="./images/svg/arrow-right.svg" />
+						</div>
+						<div class="nav-open-link-section">
+							<div class="nav-open-play-button flex-center">
+								<img class="svg" src="./images/svg/play-arrow.svg" />
+								<span>PLAY ZONE</span>
+							</div>
+
+							<ul class="main">
+								<li><a href="#" class="flex-center">HOME</a></li>
+								<li>
+									<a href="#" class="flex-center">
+										SHOP<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+									/></a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"
+										>DISCOVER<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+									/></a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"
+										>HELP<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+									/></a>
+								</li>
+							</ul>
+							<ul class="secondary">
+								<li>
+									<a href="#" class="flex-center"
+										><img class="svg svg-22" src="./images/svg/lego-head.svg" />
+										Sign In</a
+									>
+								</li>
+								<li>
+									<a href="#" class="flex-center"
+										><img class="svg svg-22" src="./images/insidersOut.svg" />
+										Join Insiders</a
+									>
+								</li>
+								<li><a href="#" class="flex-center">My wishlist</a></li>
+								<li><a href="#" class="flex-center">My bag (0)</a></li>
+								<li>
+									<a href="#" class="flex-center"
+										><img
+											class="svg svg-16"
+											src="./images/svg/location.svg"
+										/>United Kingdom</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<!-- Nav Closed -->
 					<div class="nav-closed">
 						<nav class="nav-container-mobile flex-container">
+							<span class="menu-text">MENU</span>
 							<label for="burger-menu">
 								<div class="burger-menu-container menu-open">
-									<span class="menu-text">MENU</span>
 									<div class="burger">
 										<div class="burger-menu"></div>
 									</div>
@@ -76,16 +137,19 @@
 							</label>
 							<a href="#" class="logo"><img src="/images/brand-lego.svg" /></a>
 							<div class="search-bar">
-								<i class="fa-solid fa-magnifying-glass"></i>
+								<img
+									class="svg svg-18"
+									src="./images/svg/magnifying-glass.svg"
+								/>
 							</div>
 							<a href="#" class="lego-head">
-								<img src="/images/lego-head.PNG" width="20" height="22" />
+								<img class="svg svg-22" src="/images/svg/lego-head.svg" />
 							</a>
 							<div class="heart">
-								<i class="fa-regular fa-heart"></i>
+								<img class="svg svg-18" src="/images/svg/heart.svg" />
 							</div>
 							<div class="cart">
-								<i class="fa-solid fa-bag-shopping"></i>
+								<img class="svg svg-18" src="/images/svg/shopping.svg" />
 								<span>0</span>
 							</div>
 						</nav>
@@ -189,14 +253,14 @@
 						Cottage.
 					</span>
 					<div class="hero-banner-button flex-container">
-						<a href="#" class="banner-button white-button"
+						<a href="#" class="banner-button white-button flex-center"
 							><span>Shop now</span>
-							<i class="fa-solid fa-angle-right fa-xl"></i
-						></a>
-						<a href="#" class="banner-button white-button"
+							<img class="svg svg-16" src="/images/svg/arrow-right.svg" />
+						</a>
+						<a href="#" class="banner-button white-button flex-center"
 							><span>Learn more</span>
-							<i class="fa-solid fa-angle-right fa-xl"></i
-						></a>
+							<img class="svg svg-16" src="/images/svg/arrow-right.svg"
+						/></a>
 					</div>
 				</div>
 			</section>
@@ -504,11 +568,11 @@
 					/>
 					<div class="halloween-hero-content">
 						<span class="banner-tagline"> Make Halloween a real treat </span>
-						<div class="hero-banner-button">
-							<a href="#" class="banner-button white-button">
+						<div class="hero-banner-button flex-container">
+							<a href="#" class="banner-button white-button flex-center">
 								<span>Shop now</span>
-								<i class="fa-solid fa-angle-right fa-xl"></i
-							></a>
+								<img class="svg svg-16" src="/images/svg/arrow-right.svg"
+							/></a>
 						</div>
 					</div>
 				</div>
@@ -763,10 +827,10 @@
 					</ul>
 
 					<div class="hero-banner-button flex-center">
-						<a href="#" class="banner-button">
+						<a href="#" class="banner-button flex-center">
 							<span>Join now</span>
-							<i class="fa-solid fa-angle-right fa-xl"></i
-						></a>
+							<a href="#"><i class="fa-solid fa-angle-right fa-xl"></i></a>
+						</a>
 
 						<a href="#" class="banner-button">
 							<span>Sign in</span>
@@ -789,14 +853,14 @@
 							Get this gift with LEGO&reg; | Disney purchases of £95 or more.*
 						</span>
 						<div class="hero-banner-button flex-center">
-							<a href="#" class="banner-button white-button">
+							<a href="#" class="banner-button white-button flex-center">
 								<span>Shop now</span>
-								<i class="fa-solid fa-angle-right fa-xl"></i
-							></a>
-							<a href="#" class="banner-button white-button">
+								<img class="svg svg-16" src="./images/svg/arrow-right.svg"
+							/></a>
+							<a href="#" class="banner-button white-button flex-center">
 								<span>Learn now</span>
-								<i class="fa-solid fa-angle-right fa-xl"></i
-							></a>
+								<img class="svg svg-16" src="./images/svg/arrow-right.svg"
+							/></a>
 						</div>
 					</div>
 				</div>
@@ -826,10 +890,13 @@
 											jet so ahead of its time
 										</p>
 
-										<a href="#" class="read-more">
+										<a href="#" class="read-more flex-center">
 											<span>Read more</span>
-											<i class="fa-solid fa-angle-right fa-xl"></i
-										></a>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+											/>
+										</a>
 									</div>
 								</div>
 							</a>
@@ -855,10 +922,12 @@
 											think...
 										</p>
 
-										<a href="#" class="read-more">
+										<a href="#" class="read-more flex-center">
 											<span>Read more</span>
-											<i class="fa-solid fa-angle-right fa-xl"></i
-										></a>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
 									</div>
 								</div>
 							</a>
@@ -881,10 +950,12 @@
 											skills in 2-year-olds while learning to build.
 										</p>
 
-										<a href="#" class="read-more">
+										<a href="#" class="read-more flex-center">
 											<span>Read more</span>
-											<i class="fa-solid fa-angle-right fa-xl"></i
-										></a>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
 									</div>
 								</div>
 							</a>
@@ -908,10 +979,12 @@
 											dominate their destiny.
 										</p>
 
-										<a href="#" class="read-more">
+										<a href="#" class="read-more flex-center">
 											<span>Read more</span>
-											<i class="fa-solid fa-angle-right fa-xl"></i
-										></a>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
 									</div>
 								</div>
 							</a>
@@ -969,7 +1042,7 @@
 									<span>Your email address</span>
 								</label>
 								<a href="#">
-									<i class="fa-solid fa-chevron-right"></i>
+									<img class="svg svg-16" src="./images/svg/arrow-right.svg" />
 								</a>
 							</div>
 						</div>
