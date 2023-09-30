@@ -181,7 +181,7 @@ body:has(.burger-menu-input:checked) {
 
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile .menu-text {
   z-index: 5;
-  top: -45px;
+  top: -47px;
   left: 30px;
   transform: scale(2);
   transition: all 100ms ease-out;
@@ -236,6 +236,7 @@ body:has(.burger-menu-input:checked) {
   z-index: 5;
   transform: translateX(-100%);
   transition: transform 300ms ease-out;
+  overflow: hidden;
 }
 
 .nav-open-top {
@@ -254,11 +255,14 @@ body:has(.burger-menu-input:checked) {
   font-size: 0.7rem;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(8, 65, 111, 0.5960784314);
-  border-bottom: 2px solid rgba(66, 121, 163, 0.4666666667);
+  border-bottom: 2px solid rgba(41, 41, 41, 0.2392156863);
 }
 .nav-open-play-button img {
   width: 15px;
   margin-right: 0.5rem;
+}
+.nav-open-play-button:hover {
+  background-color: #fff;
 }
 
 .nav-open-link-section {
@@ -271,6 +275,10 @@ body:has(.burger-menu-input:checked) {
 .nav-open-link-section .main a {
   font-size: 0.9rem;
   justify-content: space-between;
+}
+.nav-open-link-section .main label {
+  cursor: pointer;
+  position: relative;
 }
 .nav-open-link-section .secondary a {
   font-size: 0.7rem;
@@ -310,6 +318,143 @@ body:has(.burger-menu-input:checked) {
 .nav-container-mobile .cart {
   flex-direction: column;
   margin-top: 10px;
+}
+
+.label-cursor {
+  cursor: pointer;
+}
+
+.panel-close-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+#panel-shop-close:checked ~ .nav-open .shop-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
+#panel-shop-close:checked + label {
+  top: -100px;
+}
+
+#panel-shop-open:checked ~ .nav-open .nav-open-top img {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+#panel-shop-open:checked ~ .nav-open .shop-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(0%);
+  transition: all 300ms ease-out;
+}
+#panel-shop-open:checked ~ .nav-closed .menu-text {
+  left: 50px;
+  transition: left 300ms ease;
+}
+
+#panel-shop-close:checked ~ .nav-open .shop-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
+#panel-shop-close:checked + label {
+  top: -100px;
+}
+
+#panel-shop-open:checked ~ .nav-open .nav-open-top img {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+#panel-shop-open:checked ~ .nav-open .shop-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(0%);
+  transition: all 300ms ease-out;
+}
+#panel-shop-open:checked ~ .nav-closed .menu-text {
+  left: 50px;
+  transition: left 300ms ease;
+}
+
+#panel-discover-close:checked ~ .nav-open .discover-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
+#panel-discover-close:checked + label {
+  top: -100px;
+}
+
+#panel-discover-open:checked ~ .nav-open .nav-open-top img {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+#panel-discover-open:checked ~ .nav-open .discover-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(0%);
+  transition: all 300ms ease-out;
+}
+#panel-discover-open:checked ~ .nav-closed .menu-text {
+  left: 50px;
+  transition: left 300ms ease;
+}
+
+#panel-help-close:checked ~ .nav-open .help-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
+#panel-help-close:checked + label {
+  top: -100px;
+}
+
+#panel-help-open:checked ~ .nav-open .nav-open-top img {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+#panel-help-open:checked ~ .nav-open .help-panel {
+  position: absolute;
+  top: 0;
+  transform: translateX(0%);
+  transition: all 300ms ease-out;
+}
+#panel-help-open:checked ~ .nav-closed .menu-text {
+  left: 50px;
+  transition: left 300ms ease;
+}
+
+.submenu-panel {
+  margin-top: 3.25rem;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.submenu-panel .panel-title {
+  color: #fff;
+  background-color: rgb(0, 109, 183);
+  text-decoration: underline;
+  padding: 0.95rem 1.2rem;
+}
+.submenu-panel ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3568627451);
+}
+.submenu-panel ul li a {
+  font-size: 0.9rem;
+  justify-content: space-between;
+  padding: 0.95rem 1.2rem;
+}
+
+.burger-menu-input:not(:checked) ~ .nav-closed .nav-container-mobile .menu-text {
+  left: 15px !important;
 }
 
 .logo {
