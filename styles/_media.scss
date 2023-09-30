@@ -1,0 +1,381 @@
+// first breakpoint is 601px for image and content
+//  then 901px for nav bar to change to desktop and content get bigger
+// content has max width of 100rem
+
+// Medium screens / Tablet
+@media screen and (min-width: 601px) {
+	// burger menu
+	.burger-menu-input:checked {
+		& ~ .nav-closed .nav-container-mobile {
+			label {
+				left: 21rem;
+				top: -40px;
+				transition: all 300ms ease-out;
+			}
+		}
+		& ~ .nav-open {
+			transition: all 300ms ease-out;
+			transform: translate(0%);
+			max-width: 24rem;
+		}
+	}
+
+	.nav-open {
+		max-width: 24rem;
+	}
+
+	// Promotion Top bar
+	.top-bar-mobile {
+		justify-content: center;
+	}
+	.promotion-tag {
+		flex-grow: 1;
+	}
+	.close {
+		margin-left: auto;
+	}
+
+	// first hero hocus pocus
+	.hero-logo-mobile {
+		display: none;
+	}
+
+	.hero-text-container {
+		position: absolute;
+		top: 50%;
+		left: 2rem;
+		transform: translateY(-50%);
+		text-align: left;
+		max-width: 50%;
+		padding: 0;
+		h2 {
+			font-size: 0.9rem;
+		}
+		.banner-tagline {
+			font-size: 0.7rem;
+		}
+		.hero-logo {
+			display: block;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		.hero-banner-button {
+			justify-content: start;
+		}
+	}
+
+	// quick links
+	.quick-links {
+		ul {
+			padding: 0 1rem;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+		}
+		.product-quick-links {
+			max-width: 3rem;
+			margin: 1rem 0.6rem;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	// recommended section
+	.recommendation-container ul li {
+		width: 45%;
+	}
+
+	// help section
+	.help-container {
+		border-radius: 3rem;
+	}
+
+	// halloween section
+	.halloween-hero-container {
+		position: relative;
+		.halloween-hero-content {
+			padding: 0;
+			background-color: transparent;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			.banner-tagline {
+				margin: 0;
+			}
+			.hero-banner-button {
+				margin: 10px 0;
+			}
+		}
+	}
+
+	// membership section
+	.membership-container {
+		ul {
+			flex-direction: row;
+			align-items: start;
+			gap: 10px;
+		}
+		.m-card {
+			width: 45%;
+		}
+	}
+
+	// disney hero section
+	.disney-hero-container {
+		position: relative;
+		.disney-img-container {
+			position: relative;
+			& > img {
+				position: absolute;
+				right: 1rem;
+				bottom: 1rem;
+				width: 6rem;
+			}
+		}
+
+		.disney-hero-content {
+			position: absolute;
+			background-color: transparent;
+			text-align: left;
+			top: 50%;
+			left: 2rem;
+			transform: translateY(-50%);
+			width: 50%;
+			padding: 0;
+			.banner-tagline {
+				font-size: 0.8rem;
+				margin-top: 10px;
+				line-height: 1.5;
+			}
+			.hero-banner-button {
+				justify-content: start;
+				margin: 1rem 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 901px) {
+	.section-title {
+		font-size: 2rem;
+	}
+	// top bar
+	.top-bar-mobile {
+		padding: 1rem 2rem;
+		.play-zone {
+			display: initial;
+		}
+
+		.sign-join {
+			display: flex;
+		}
+
+		.close {
+			display: none;
+		}
+	}
+
+	// nav bar
+	body:has(.burger-menu-input:checked) {
+		overflow: auto;
+	}
+
+	.mobile-overlay {
+		display: none;
+	}
+
+	.burger-menu-input:checked ~ .mobile-overlay {
+		display: none;
+	}
+	.nav-open {
+		display: none;
+	}
+	.nav-closed {
+		display: none;
+	}
+
+	.desktop-header {
+		background-color: #ffcf00;
+		display: block;
+	}
+
+	.desktop-nav-container {
+		background-color: inherit;
+	}
+
+	.mobile-header {
+		background-color: #f8f8f8;
+	}
+
+	// first hero container
+	.hero-logo-mobile {
+		display: none;
+	}
+
+	.hero-text-container {
+		left: 5rem;
+		max-width: 35%;
+		h2 {
+			font-size: 2rem;
+		}
+		.banner-tagline {
+			font-size: 1rem;
+		}
+	}
+
+	// quick links
+	.quick-links {
+		ul {
+			padding: 1rem 1rem;
+			justify-content: center;
+		}
+		.product-quick-links {
+			max-width: 4rem;
+			margin: 1rem 1.5rem;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	// membership section
+	.membership-container {
+		.m-card {
+			width: 24%;
+		}
+	}
+
+	// disney hero section
+	.disney-hero-container {
+		.disney-hero-content {
+			left: 5rem;
+			width: 40%;
+			padding: 0;
+			h3 {
+				font-size: 1.7rem;
+			}
+			.banner-tagline {
+				font-size: 1rem;
+				margin-top: 10px;
+				line-height: 1.5;
+			}
+			.hero-banner-button {
+				justify-content: start;
+				margin: 1rem 0;
+			}
+		}
+	}
+
+	// FOOTER
+	.footer-small {
+		display: none;
+	}
+	.footer-big {
+		&.section {
+			background-color: inherit;
+		}
+		display: block;
+		.region {
+			flex: 1;
+			padding-top: 2rem;
+		}
+		.country {
+			flex-direction: column;
+			img {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.dropdown-menu {
+			padding: 2rem 2.5rem;
+			padding-bottom: 0;
+			flex: 2;
+			flex-wrap: wrap;
+			.links-wrapper {
+				flex: 1 1 15rem;
+				max-width: 10rem;
+				margin-right: 6rem;
+				margin-bottom: 3rem;
+				h3 {
+					margin-bottom: 1.7rem;
+				}
+			}
+			a {
+				display: block;
+				padding: 0.6rem 0;
+				color: #fff;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		// second section
+		.email-social {
+			padding: 1rem 2rem;
+		}
+		.email-subscription {
+			padding: 0;
+			color: #fff;
+		}
+
+		.footer-social {
+			padding: 0;
+			margin-left: auto;
+			flex-basis: 20rem;
+		}
+
+		.footer-legal {
+			padding: 2rem;
+			p {
+				margin-top: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	.top-bar-mobile {
+		.sign-join {
+			span {
+				display: initial;
+			}
+		}
+	}
+
+	.membership-container ul {
+		justify-content: space-between;
+	}
+	.membership-container {
+		max-width: 80rem;
+		margin: 2rem auto;
+	}
+
+	// recommended section
+	.recommendation-container ul li {
+		width: 26%;
+	}
+
+	.footer-big {
+		.country {
+			max-width: 8rem;
+		}
+		.dropdown-menu {
+			padding: 2rem 2.5rem;
+			padding-bottom: 0;
+			flex: 0 1 auto;
+			flex-wrap: nowrap;
+			.links-wrapper {
+				flex: 1 1 15rem;
+				max-width: 10rem;
+				margin-right: 6rem;
+				margin-bottom: 3rem;
+				h3 {
+					margin-bottom: 1.7rem;
+				}
+			}
+		}
+	}
+}
