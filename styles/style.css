@@ -67,6 +67,10 @@ a {
   height: 18px;
 }
 
+.svg-20 {
+  height: 20px;
+}
+
 .svg-22 {
   height: 22px;
 }
@@ -157,6 +161,20 @@ header {
   z-index: 6;
 }
 
+.mobile-overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
 body:has(.burger-menu-input:checked) {
   overflow: hidden;
 }
@@ -171,10 +189,9 @@ body:has(.burger-menu-input:checked) {
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile label {
   left: 90%;
   top: -40px;
+  width: 46px;
+  height: 30px;
   transition: all 300ms ease-out;
-}
-.burger-menu-input:checked ~ .nav-closed .nav-container-mobile label:has(.top-close-button:checked) {
-  top: 7px;
 }
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile .burger-menu::after {
   animation: rotate405 300ms ease-out forwards;
@@ -182,6 +199,12 @@ body:has(.burger-menu-input:checked) {
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile .burger-menu::before {
   transition: all 300ms ease-out forwards;
   transform: rotate(135deg);
+}
+.burger-menu-input:checked ~ .mobile-overlay {
+  display: block;
+  opacity: 0.5;
+  transition: opacity 300ms ease;
+  pointer-events: auto;
 }
 .burger-menu-input:checked ~ .nav-open {
   transition: all 300ms ease-out;
@@ -276,11 +299,17 @@ body:has(.burger-menu-input:checked) {
   position: absolute;
   left: 0;
   top: 0;
+  width: 46px;
+  height: 42px;
   z-index: 6;
   transition: all 300ms ease-out;
 }
 .nav-container-mobile i {
   font-size: 1.25rem;
+}
+.nav-container-mobile .cart {
+  flex-direction: column;
+  margin-top: 10px;
 }
 
 .logo {
@@ -294,33 +323,28 @@ body:has(.burger-menu-input:checked) {
   width: 40px;
 }
 
-/* Other things */
-/* .top-section {
-	max-width: 100rem;
-	padding: 20px 20px;
-	justify-content: space-between;
-	font-size: 12px;
-} */
-/* .fa-magnifying-glass {
-	font-size: 1.25em;
-	background-color: #fff;
-	padding: 10px;
-	border-radius: 50%;
-} */
 .play-zone {
+  display: none;
   background-color: rgb(171, 217, 255);
   padding: 5px 15px;
   border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(127, 157, 182, 0.5960784314);
 }
 .play-zone:hover {
   background-color: #fff;
 }
-.play-zone i {
-  margin-right: 10px;
+.play-zone img {
+  width: 15px;
+  margin-right: 0.5rem;
+  transform: rotate(180deg);
 }
 
 .sign-join {
+  display: none;
   height: 100%;
+}
+.sign-join span {
+  display: none;
 }
 
 .user {
@@ -335,23 +359,40 @@ body:has(.burger-menu-input:checked) {
 }
 
 /* MAIN NAV */
-.main-nav-container {
-  background-color: #ffcf00;
+.desktop-header {
+  display: none;
 }
 
-.main-bar {
+.desktop-nav-container {
+  background-color: #ffcf00;
+  padding: 0.7rem 2rem;
+}
+.desktop-nav-container .navbar {
   /* height: 4.68rem; */
   width: 100%;
   max-width: 100rem;
   align-items: center;
 }
-
-.navbar-links {
+.desktop-nav-container .navbar .brand img {
+  width: 55px;
+  display: block;
+  margin-right: 3rem;
+}
+.desktop-nav-container .navbar .navbar-links {
   margin: 0;
 }
-
-.nav-link {
+.desktop-nav-container .navbar .nav-link {
   margin-right: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.desktop-nav-container .cart-container {
+  gap: 30px;
+}
+.desktop-nav-container .cart-container .search-bar {
+  background-color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
 }
 
 /* NAV CART */
@@ -365,7 +406,7 @@ body:has(.burger-menu-input:checked) {
 .hero-section {
   background-color: #000;
   color: #fff;
-  text-align: center;
+  position: relative;
 }
 
 .hero-image {
@@ -375,7 +416,7 @@ body:has(.burger-menu-input:checked) {
 .hero-bg-image {
   position: relative;
 }
-.hero-bg-image .hero-logo {
+.hero-bg-image .hero-logo-mobile {
   position: absolute;
   bottom: 20px;
   right: 10px;
@@ -389,6 +430,10 @@ body:has(.burger-menu-input:checked) {
 
 .hero-text-container {
   padding: 1.2rem;
+  text-align: center;
+}
+.hero-text-container .hero-logo {
+  display: none;
 }
 
 .banner-title {
@@ -530,6 +575,7 @@ body:has(.burger-menu-input:checked) {
   font-weight: 600;
   font-size: 0.9rem;
   padding: 0.4rem 0;
+  height: 55px;
 }
 
 .stars img {
@@ -562,12 +608,16 @@ img[class=two-lines] {
 .help-container {
   background-color: #e6f3ff;
   padding: 0.5rem;
+  align-items: center;
 }
-.help-container img {
+.help-container img:first-child {
   border: 3px solid #fff;
   border-radius: 50%;
   width: 100px;
   height: 100px;
+}
+.help-container img:last-child {
+  height: 5rem;
 }
 .help-container .help-content {
   margin: 0.3rem 0.2rem;
@@ -597,7 +647,7 @@ img[class=two-lines] {
   text-align: center;
 }
 
-.halloween-hero-container > img {
+.halloween-hero-container picture img {
   display: block;
   width: 100%;
 }
@@ -684,6 +734,8 @@ img[class=two-lines] {
 .membership-content {
   text-align: center;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 .membership-content h3 {
   font-size: 1.5rem;
@@ -691,6 +743,7 @@ img[class=two-lines] {
 }
 .membership-content span {
   font-size: 0.85rem;
+  height: 60px;
 }
 
 .bg-green {
@@ -709,9 +762,18 @@ img[class=two-lines] {
   background-color: #00a3e7;
 }
 
-.disney-hero-container > img {
+.disney-hero-container picture > img {
   display: block;
   width: 100%;
+}
+.disney-hero-container .disney-img-container {
+  position: relative;
+}
+.disney-hero-container .disney-img-container > img {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 8rem;
 }
 .disney-hero-container .hero-banner-button {
   gap: 20px;
@@ -776,6 +838,10 @@ img[class=two-lines] {
 }
 .tagline-content p a:hover {
   text-decoration: underline;
+}
+
+.footer-big {
+  display: none;
 }
 
 footer {
@@ -992,4 +1058,309 @@ footer {
   margin-top: 5rem;
   margin-bottom: 2rem;
   color: #fff;
+}
+
+@media screen and (min-width: 601px) {
+  .burger-menu-input:checked ~ .nav-closed .nav-container-mobile label {
+    left: 21rem;
+    top: -40px;
+    transition: all 300ms ease-out;
+  }
+  .burger-menu-input:checked ~ .nav-open {
+    transition: all 300ms ease-out;
+    transform: translate(0%);
+    max-width: 24rem;
+  }
+  .nav-open {
+    max-width: 24rem;
+  }
+  .top-bar-mobile {
+    justify-content: center;
+  }
+  .promotion-tag {
+    flex-grow: 1;
+  }
+  .close {
+    margin-left: auto;
+  }
+  .hero-logo-mobile {
+    display: none;
+  }
+  .hero-text-container {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 50%;
+    padding: 0;
+  }
+  .hero-text-container h2 {
+    font-size: 0.9rem;
+  }
+  .hero-text-container .banner-tagline {
+    font-size: 0.7rem;
+  }
+  .hero-text-container .hero-logo {
+    display: block;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .hero-text-container .hero-banner-button {
+    justify-content: start;
+  }
+  .quick-links ul {
+    padding: 0 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .quick-links .product-quick-links {
+    max-width: 3rem;
+    margin: 1rem 0.6rem;
+  }
+  .quick-links .product-quick-links img {
+    width: 100%;
+  }
+  .recommendation-container ul li {
+    width: 45%;
+  }
+  .help-container {
+    border-radius: 3rem;
+  }
+  .halloween-hero-container {
+    position: relative;
+  }
+  .halloween-hero-container .halloween-hero-content {
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .halloween-hero-container .halloween-hero-content .banner-tagline {
+    margin: 0;
+  }
+  .halloween-hero-container .halloween-hero-content .hero-banner-button {
+    margin: 10px 0;
+  }
+  .membership-container ul {
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+  }
+  .membership-container .m-card {
+    width: 45%;
+  }
+  .disney-hero-container {
+    position: relative;
+  }
+  .disney-hero-container .disney-img-container {
+    position: relative;
+  }
+  .disney-hero-container .disney-img-container > img {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 6rem;
+  }
+  .disney-hero-container .disney-hero-content {
+    position: absolute;
+    background-color: transparent;
+    text-align: left;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 0;
+  }
+  .disney-hero-container .disney-hero-content .banner-tagline {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .disney-hero-container .disney-hero-content .hero-banner-button {
+    justify-content: start;
+    margin: 1rem 0;
+  }
+}
+@media screen and (min-width: 901px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .top-bar-mobile {
+    padding: 1rem 2rem;
+  }
+  .top-bar-mobile .play-zone {
+    display: initial;
+  }
+  .top-bar-mobile .sign-join {
+    display: flex;
+  }
+  .top-bar-mobile .close {
+    display: none;
+  }
+  body:has(.burger-menu-input:checked) {
+    overflow: auto;
+  }
+  .mobile-overlay {
+    display: none;
+  }
+  .burger-menu-input:checked ~ .mobile-overlay {
+    display: none;
+  }
+  .nav-open {
+    display: none;
+  }
+  .nav-closed {
+    display: none;
+  }
+  .desktop-header {
+    background-color: #ffcf00;
+    display: block;
+  }
+  .desktop-nav-container {
+    background-color: inherit;
+  }
+  .mobile-header {
+    background-color: #f8f8f8;
+  }
+  .hero-logo-mobile {
+    display: none;
+  }
+  .hero-text-container {
+    left: 5rem;
+    max-width: 35%;
+  }
+  .hero-text-container h2 {
+    font-size: 2rem;
+  }
+  .hero-text-container .banner-tagline {
+    font-size: 1rem;
+  }
+  .quick-links ul {
+    padding: 1rem 1rem;
+    justify-content: center;
+  }
+  .quick-links .product-quick-links {
+    max-width: 4rem;
+    margin: 1rem 1.5rem;
+  }
+  .quick-links .product-quick-links img {
+    width: 100%;
+  }
+  .membership-container .m-card {
+    width: 24%;
+  }
+  .disney-hero-container .disney-hero-content {
+    left: 5rem;
+    width: 40%;
+    padding: 0;
+  }
+  .disney-hero-container .disney-hero-content h3 {
+    font-size: 1.7rem;
+  }
+  .disney-hero-container .disney-hero-content .banner-tagline {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .disney-hero-container .disney-hero-content .hero-banner-button {
+    justify-content: start;
+    margin: 1rem 0;
+  }
+  .footer-small {
+    display: none;
+  }
+  .footer-big {
+    display: block;
+  }
+  .footer-big.section {
+    background-color: inherit;
+  }
+  .footer-big .region {
+    flex: 1;
+    padding-top: 2rem;
+  }
+  .footer-big .country {
+    flex-direction: column;
+  }
+  .footer-big .country img {
+    margin-bottom: 1rem;
+  }
+  .footer-big .dropdown-menu {
+    padding: 2rem 2.5rem;
+    padding-bottom: 0;
+    flex: 2;
+    flex-wrap: wrap;
+  }
+  .footer-big .dropdown-menu .links-wrapper {
+    flex: 1 1 15rem;
+    max-width: 10rem;
+    margin-right: 6rem;
+    margin-bottom: 3rem;
+  }
+  .footer-big .dropdown-menu .links-wrapper h3 {
+    margin-bottom: 1.7rem;
+  }
+  .footer-big .dropdown-menu a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #fff;
+  }
+  .footer-big .dropdown-menu a:hover {
+    text-decoration: underline;
+  }
+  .footer-big .email-social {
+    padding: 1rem 2rem;
+  }
+  .footer-big .email-subscription {
+    padding: 0;
+    color: #fff;
+  }
+  .footer-big .footer-social {
+    padding: 0;
+    margin-left: auto;
+    flex-basis: 20rem;
+  }
+  .footer-big .footer-legal {
+    padding: 2rem;
+  }
+  .footer-big .footer-legal p {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .top-bar-mobile .sign-join span {
+    display: initial;
+  }
+  .membership-container ul {
+    justify-content: space-between;
+  }
+  .membership-container {
+    max-width: 80rem;
+    margin: 2rem auto;
+  }
+  .recommendation-container ul li {
+    width: 26%;
+  }
+  .footer-big .country {
+    max-width: 8rem;
+  }
+  .footer-big .dropdown-menu {
+    padding: 2rem 2.5rem;
+    padding-bottom: 0;
+    flex: 0 1 auto;
+    flex-wrap: nowrap;
+  }
+  .footer-big .dropdown-menu .links-wrapper {
+    flex: 1 1 15rem;
+    max-width: 10rem;
+    margin-right: 6rem;
+    margin-bottom: 3rem;
+  }
+  .footer-big .dropdown-menu .links-wrapper h3 {
+    margin-bottom: 1.7rem;
+  }
 }/*# sourceMappingURL=style.css.map */
