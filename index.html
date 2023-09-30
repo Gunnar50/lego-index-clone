@@ -25,13 +25,21 @@
 		<header>
 			<div class="mobile-header">
 				<!-- Mobile only top bar -->
-				<div>
+				<div class="section">
 					<!-- <input
 						type="checkbox"
 						id="close-button"
 						class="top-close-button checkbox-button-general"
 					/> -->
 					<div class="top-bar-mobile flex-container">
+						<a href="#" class="play-zone">
+							<!-- DOES NOT SHOW IN MOBILE -->
+							<span class="play-button flex-center">
+								<img class="svg" src="./images/svg/play-arrow.svg" />
+								PLAY ZONE
+							</span>
+						</a>
+
 						<!-- Promotion tag -->
 						<div class="promotion-tag flex-center">
 							<img
@@ -45,6 +53,22 @@
 							</div>
 
 							<img class="svg svg-18" src="./images/svg/arrow-right.svg" />
+						</div>
+
+						<div class="sign-join flex-center">
+							<div class="user">
+								<a href="#" class="flex-center">
+									<img class="svg svg-22" src="/images/svg/lego-head.svg" />
+									<span>Sign In</span>
+								</a>
+							</div>
+
+							<div class="join">
+								<a href="" class="flex-center">
+									<img class="svg svg-22" src="/images/insidersOut.svg" />
+									<span>Join Insiders</span>
+								</a>
+							</div>
 						</div>
 
 						<!-- Close button for closing the top bar -->
@@ -64,15 +88,18 @@
 						type="checkbox"
 					/>
 					<!-- Nav Opened -->
+					<div class="mobile-overlay"></div>
 					<div class="nav-open">
 						<div class="nav-open-top">
 							<img class="svg svg-14" src="./images/svg/arrow-right.svg" />
 						</div>
 						<div class="nav-open-link-section">
-							<div class="nav-open-play-button flex-center">
-								<img class="svg" src="./images/svg/play-arrow.svg" />
-								<span>PLAY ZONE</span>
-							</div>
+							<a href="#">
+								<div class="nav-open-play-button flex-center">
+									<img class="svg" src="./images/svg/play-arrow.svg" />
+									<span>PLAY ZONE</span>
+								</div></a
+							>
 
 							<ul class="main">
 								<li><a href="#" class="flex-center">HOME</a></li>
@@ -148,9 +175,9 @@
 							<div class="heart">
 								<img class="svg svg-18" src="/images/svg/heart.svg" />
 							</div>
-							<div class="cart">
+							<div class="cart flex-center">
 								<img class="svg svg-18" src="/images/svg/shopping.svg" />
-								<span>0</span>
+								0
 							</div>
 						</nav>
 					</div>
@@ -158,48 +185,12 @@
 			</div>
 
 			<!-- Desktop only top bar -->
-			<div class="desktop-header" style="display: none">
-				<div class="top-bar-desktop">
-					<a href="#" class="play-zone">
-						<span class="play-button">
-							<i class="fa-solid fa-arrow-left-long"></i>
-							PLAY ZONE
-						</span>
-					</a>
-
-					<div class="promotion-tag">
-						<i class="fa-solid fa-angle-left fa-2xl"></i>
-
-						<div class="promotion-text">
-							<span>FREE delivery on orders above £50!*</span>
-							<a href="#">Learn more</a>
-						</div>
-
-						<i class="fa-solid fa-angle-right fa-2xl"></i>
-					</div>
-
-					<div class="flex-center sign-join">
-						<div class="user">
-							<a href="#" class="flex-center">
-								<img src="/images/lego-head.PNG" width="20" />
-								<span>Sign In</span>
-							</a>
-						</div>
-
-						<div class="join">
-							<a href="" class="flex-center">
-								<img src="/images/insidersOut.svg" width="20" />
-								<span>Join Insiders</span>
-							</a>
-						</div>
-					</div>
-				</div>
-
+			<div class="desktop-header">
 				<!-- Desktop only nav bar -->
-				<div class="desktop-nav-container flex-container">
+				<div class="section desktop-nav-container flex-container">
 					<nav class="navbar flex-container">
 						<a href="/" class="brand">
-							<img src="/images/brand-lego.svg" width="55" />
+							<img src="/images/brand-lego.svg" />
 						</a>
 						<ul class="navbar-links flex-center">
 							<li class="nav-link"><a href="#">SHOP</a></li>
@@ -208,18 +199,17 @@
 						</ul>
 					</nav>
 
-					<div class="cart-container flex-container">
+					<div class="cart-container flex-center">
 						<div class="search-bar">
-							<i class="fa-solid fa-magnifying-glass"></i>
+							<img class="svg svg-18" src="./images/svg/magnifying-glass.svg" />
 						</div>
 
 						<div class="heart">
-							<i class="fa-regular fa-heart"></i>
+							<img class="svg svg-18" src="/images/svg/heart.svg" />
 						</div>
-
-						<div class="cart flex-container">
-							<i class="fa-solid fa-bag-shopping"></i>
-							<span>(0)</span>
+						<div class="cart flex-center">
+							<img class="svg svg-18" src="/images/svg/shopping.svg" />
+							(0)
 						</div>
 					</div>
 				</div>
@@ -235,10 +225,27 @@
 						<div class="hero-banner-image-holder">
 							<div class="hero-bg-image">
 								<picture class="product-image">
-									<img class="hero-image" src="images/pocusherosmall.webp" />
+									<source
+										media="(min-width:901px)"
+										srcset="
+											./images/21341-Homepage-PS-202307-Hero-Standard-Large.jpeg
+										"
+									/>
+									<source
+										media="(min-width:601px)"
+										srcset="
+											./images/21341-Homepage-PS-202307-Hero-Standard-Medium.webp
+										"
+									/>
+
+									<img
+										class="hero-image"
+										src="images/pocusherosmall.webp"
+										alt="Hocus Pocus Hero Image"
+									/>
 								</picture>
 								<img
-									class="hero-logo"
+									class="hero-logo-mobile"
 									src="/images/disney-hocus-pocus-logo.png"
 								/>
 							</div>
@@ -247,6 +254,7 @@
 				</div>
 				<!-- Banner text -->
 				<div class="hero-text-container">
+					<img class="hero-logo" src="/images/disney-hocus-pocus-logo.png" />
 					<h2 class="banner-title">The magic is brewing</h2>
 					<span class="banner-tagline">
 						Conjure up the fun with new Hocus Pocus: The Sanderson Sisters'
@@ -324,237 +332,229 @@
 			</section>
 
 			<!-- RECOMMENDATION SECTION -->
-			<section class="section recommendation">
-				<h2 class="section-title">Recommended For You</h2>
-				<div class="recommendation-container">
-					<ul class="flex-container">
-						<!-- CARD 1 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+			<section class="section">
+				<div class="recommendation">
+					<h2 class="section-title">Recommended For You</h2>
+					<div class="recommendation-container">
+						<ul class="flex-container">
+							<!-- CARD 1 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/recommendations/concorde-10318.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/concorde-10318.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Concorde</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Concorde</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price">£169.99</span>
+										<div class="card-order-button">Back order</div>
 									</div>
-									<span class="card-price">£169.99</span>
-									<div class="card-order-button">Back order</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 2 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 2 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/recommendations/insects21342.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/insects21342.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">The Insect Collection</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">The Insect Collection</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price">£69.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£69.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 3 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 3 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img
+												src="./images/recommendations/start-wars-75366_alt1.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img
-											src="./images/recommendations/start-wars-75366_alt1.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">
-										LEGO&reg;
-										<span style="font-style: italic">Star Wars</span> &trade;
-										Advent Calendar 2023
-									</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">
+											LEGO&reg;
+											<span style="font-style: italic">Star Wars</span> &trade;
+											Advent Calendar 2023
+										</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+										</div>
+										<span class="card-price">£29.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£29.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 4 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 4 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/recommendations/gringots-76417.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/gringots-76417.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">
-										Gringotts&trade; Wizarding Bank - Collectors' Edition
-									</h3>
-									<div class="stars flex-container">
-										<img
-											class="two-lines"
-											src="./images/recommendations/starActive.svg"
-										/>
-										<img
-											class="two-lines"
-											src="./images/recommendations/starActive.svg"
-										/>
-										<img
-											class="two-lines"
-											src="./images/recommendations/starActive.svg"
-										/>
-										<img
-											class="two-lines"
-											src="./images/recommendations/starActive.svg"
-										/>
-										<img
-											class="two-lines"
-											src="./images/recommendations/halfStarsvg.svg"
-										/>
+									<div class="card-details">
+										<h3 class="card-title">
+											Gringotts&trade; Wizarding Bank - Collectors' Edition
+										</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/halfStarsvg.svg" />
+										</div>
+										<span class="card-price">£369.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£369.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 5 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 5 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img
+												src="./images/recommendations/mini-figures-71039.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/mini-figures-71039.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">
-										LEGO&reg; Minifigures Marvel Series 2
-									</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/halfStarsvg.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">
+											LEGO&reg; Minifigures Marvel Series 2
+										</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/halfStarsvg.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+										</div>
+										<span class="card-price">£3.49</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£3.49</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 6 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 6 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/recommendations/coruscant75354.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/coruscant75354.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Coruscant Guard Gunship&trade;</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Coruscant Guard Gunship&trade;</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+										</div>
+										<span class="card-price">£129.99</span>
+										<div class="card-order-button">Back order</div>
 									</div>
-									<span class="card-price">£129.99</span>
-									<div class="card-order-button">Back order</div>
 								</div>
-							</div>
-						</li>
-						<!-- CARD 7 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							</li>
+							<!-- CARD 7 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/recommendations/avengers76267.png"
+										/></a>
+										<span class="card-new"> New </span>
 									</div>
-									<a href="#">
-										<img src="./images/recommendations/avengers76267.png"
-									/></a>
-									<span class="card-new"> New </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Avengers Advent Calendar</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/halfStarsvg.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Avengers Advent Calendar</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/halfStarsvg.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+										</div>
+										<span class="card-price">£29.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£29.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-					</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
 			<!-- HELP SECTION -->
-			<section class="section help">
-				<div class="help-container flex-container">
-					<img src="./images/cookieguypng.png" alt="Cookie Guy Help" />
-					<div class="help-content">
-						<h3>
-							Help us build the most incredible personalised experience for you
-						</h3>
-						<p>
-							Help us build the most amazing personalised experience for you!
-							Give us your permission to use site cookies and we'll create you
-							an experience you're sure to love!
-						</p>
-						<div class="links">
-							<a href="#">Let's do this</a>
-							<a href="#">Tell me more</a>
+			<section class="section">
+				<div class="help flex-center">
+					<div class="help-container flex-center">
+						<img src="./images/cookieguypng.png" alt="Cookie Guy Help" />
+						<div class="help-content">
+							<h3>
+								Help us build the most incredible personalised experience for
+								you
+							</h3>
+							<p>
+								Help us build the most amazing personalised experience for you!
+								Give us your permission to use site cookies and we'll create you
+								an experience you're sure to love!
+							</p>
+							<div class="links">
+								<a href="#">Let's do this</a>
+								<a href="#">Tell me more</a>
+							</div>
 						</div>
+						<img src="./images/cookies.png" alt="Cookies" />
 					</div>
 				</div>
 			</section>
@@ -562,10 +562,21 @@
 			<!-- HALLOWEEN SECTION -->
 			<section class="section halloween-hero">
 				<div class="halloween-hero-container">
-					<img
-						src="./images/1884-Landing-202308-Whats_New-Hero-Short-Small.webp"
-						alt="halloween hero image"
-					/>
+					<picture>
+						<source
+							media="(min-width: 901px)"
+							srcset="./images/halloween-Large.jpeg"
+						/>
+						<source
+							media="(min-width: 601px)"
+							srcset="./images/halloween-medium.webp"
+						/>
+
+						<img
+							src="./images/1884-Landing-202308-Whats_New-Hero-Short-Small.webp"
+							alt="halloween hero image"
+						/>
+					</picture>
 					<div class="halloween-hero-content">
 						<span class="banner-tagline"> Make Halloween a real treat </span>
 						<div class="hero-banner-button flex-container">
@@ -579,263 +590,269 @@
 			</section>
 
 			<!-- PRODUCTS CAROUSEL SECTION -->
-			<section class="section product-carousel">
-				<h2 class="section-title">Enter a world of LEGO&reg; building fun</h2>
-				<div class="recommendation-container">
-					<ul class="flex-container">
-						<!-- CARD 1 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+			<section class="section">
+				<div class="product-carousel">
+					<h2 class="section-title">Enter a world of LEGO&reg; building fun</h2>
+					<div class="recommendation-container">
+						<ul class="flex-container">
+							<!-- CARD 1 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/classic-10698.jpeg"
+										/></a>
+										<!-- <span class="card-new"> Last Chance </span> -->
 									</div>
-									<a href="#">
-										<img src="./images/products/classic-10698.jpeg"
-									/></a>
-									<!-- <span class="card-new"> Last Chance </span> -->
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">LEGO&reg; Large Creative Brick Box</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/halfStarsvg.svg" />
+									<div class="card-details">
+										<h3 class="card-title">
+											LEGO&reg; Large Creative Brick Box
+										</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/halfStarsvg.svg" />
+										</div>
+										<span class="card-price">£44.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£44.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-						<!-- CARD 2 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							<!-- CARD 2 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/creative-11033.png"
+										/></a>
+										<!-- <span class="card-new"> New </span> -->
 									</div>
-									<a href="#">
-										<img src="./images/products/creative-11033.png"
-									/></a>
-									<!-- <span class="card-new"> New </span> -->
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Creative Fantasy Universe</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Creative Fantasy Universe</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price">£79.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£79.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-						<!-- CARD 3 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							<!-- CARD 3 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/space-mission-11022.png"
+										/></a>
+										<span class="card-new"> Last Chance </span>
 									</div>
-									<a href="#">
-										<img src="./images/products/space-mission-11022.png"
-									/></a>
-									<span class="card-new"> Last Chance </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Space Mission</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/star-inactive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Space Mission</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/star-inactive.svg" />
+										</div>
+										<span class="card-price">£69.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£69.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-						<!-- CARD 4 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							<!-- CARD 4 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/pastel-11028.png"
+										/></a>
+										<!-- <span class="card-new"> Last Chance </span> -->
 									</div>
-									<a href="#">
-										<img src="./images/products/pastel-11028.png"
-									/></a>
-									<!-- <span class="card-new"> Last Chance </span> -->
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Creative Pastel Fun</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Creative Pastel Fun</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price">£17.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£17.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-						<!-- CARD 5 - promo card -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							<!-- CARD 5 - promo card -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/world-11015.jpeg"
+										/></a>
+										<span class="card-new"> Last Chance </span>
+										<span class="card-new card-promo-tag">- 30% </span>
 									</div>
-									<a href="#">
-										<img src="./images/products/world-11015.jpeg"
-									/></a>
-									<span class="card-new"> Last Chance </span>
-									<span class="card-new card-promo-tag">- 30% </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Around the World</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Around the World</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price price-crossed">£44.99</span>
+										<span class="promo-price">£31.49</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price price-crossed">£44.99</span>
-									<span class="promo-price">£31.49</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-						<!-- CARD 6 -->
-						<li>
-							<div class="card">
-								<div class="img-area">
-									<div class="favourite">
-										<i class="fa-regular fa-heart"></i>
+							<!-- CARD 6 -->
+							<li>
+								<div class="card">
+									<div class="img-area">
+										<div class="favourite">
+											<i class="fa-regular fa-heart"></i>
+										</div>
+										<a href="#">
+											<img src="./images/products/monkey11031.png"
+										/></a>
+										<span class="card-new"> Last Chance </span>
 									</div>
-									<a href="#">
-										<img src="./images/products/monkey11031.png"
-									/></a>
-									<span class="card-new"> Last Chance </span>
-								</div>
-								<div class="card-details">
-									<h3 class="card-title">Creative Monkey Fun</h3>
-									<div class="stars flex-container">
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
-										<img src="./images/recommendations/starActive.svg" />
+									<div class="card-details">
+										<h3 class="card-title">Creative Monkey Fun</h3>
+										<div class="stars flex-container">
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+											<img src="./images/recommendations/starActive.svg" />
+										</div>
+										<span class="card-price">£8.99</span>
+										<div class="card-order-button">Add to Bag</div>
 									</div>
-									<span class="card-price">£8.99</span>
-									<div class="card-order-button">Add to Bag</div>
 								</div>
-							</div>
-						</li>
-					</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
 			<!-- MEMBERSHIP SECTION -->
-			<section class="section membership">
-				<div class="membership-container">
-					<h2 class="section-title">
-						Now membership gives you more than ever!
-					</h2>
-					<ul class="flex-center">
-						<!-- CARD 1 - points -->
-						<li class="m-card">
-							<div class="m-img">
-								<img
-									src="./images/membership/Insiders-Launch-2308-Block-Standard-4.jpeg"
-									alt="more points"
-								/>
-							</div>
-							<div class="membership-content bg-green">
-								<h3>More points</h3>
-								<span
-									>Get points with purchases - and by registering your sets
-									too!</span
-								>
-							</div>
-						</li>
+			<section class="section">
+				<div class="membership">
+					<div class="membership-container">
+						<h2 class="section-title">
+							Now membership gives you more than ever!
+						</h2>
+						<ul class="flex-center">
+							<!-- CARD 1 - points -->
+							<li class="m-card">
+								<div class="m-img">
+									<img
+										src="./images/membership/Insiders-Launch-2308-Block-Standard-4.jpeg"
+										alt="more points"
+									/>
+								</div>
+								<div class="membership-content bg-green">
+									<h3>More points</h3>
+									<span
+										>Get points with purchases - and by registering your sets
+										too!</span
+									>
+								</div>
+							</li>
 
-						<!-- CARD 2 - rewards -->
-						<li class="m-card">
-							<div class="m-img">
-								<img
-									src="./images/membership/rewards-Insiders-Launch-2308-Block-Standard-3.jpeg"
-									alt="more points"
-								/>
-							</div>
-							<div class="membership-content bg-pink">
-								<h3>More rewards</h3>
-								<span
-									>Members-only LEGO® gear, discounts, LEGOLAND tickets and
-									more!</span
-								>
-							</div>
-						</li>
+							<!-- CARD 2 - rewards -->
+							<li class="m-card">
+								<div class="m-img">
+									<img
+										src="./images/membership/rewards-Insiders-Launch-2308-Block-Standard-3.jpeg"
+										alt="more points"
+									/>
+								</div>
+								<div class="membership-content bg-pink">
+									<h3>More rewards</h3>
+									<span
+										>Members-only LEGO® gear, discounts, LEGOLAND tickets and
+										more!</span
+									>
+								</div>
+							</li>
 
-						<!-- CARD 3 - perks -->
-						<li class="m-card">
-							<div class="m-img">
-								<img
-									src="./images/membership/perks-Insiders-Launch-2308-Block-Standard-2.jpeg"
-									alt="more points"
-								/>
-							</div>
-							<div class="membership-content bg-yellow">
-								<h3>More perks</h3>
-								<span
-									>Members get early access to the hottest sets and special
-									gifts with purchase.</span
-								>
-							</div>
-						</li>
+							<!-- CARD 3 - perks -->
+							<li class="m-card">
+								<div class="m-img">
+									<img
+										src="./images/membership/perks-Insiders-Launch-2308-Block-Standard-2.jpeg"
+										alt="more points"
+									/>
+								</div>
+								<div class="membership-content bg-yellow">
+									<h3>More perks</h3>
+									<span
+										>Members get early access to the hottest sets and special
+										gifts with purchase.</span
+									>
+								</div>
+							</li>
 
-						<!-- CARD 4 - access -->
-						<li class="m-card">
-							<div class="m-img">
-								<img
-									src="./images/membership/access-Insiders-Launch-2308-Block-Standard-1.jpeg"
-									alt="more points"
-								/>
-							</div>
-							<div class="membership-content bg-blue">
-								<h3>More access</h3>
-								<span
-									>Inspiration, family play activities, communities and other
-									great stuff.</span
-								>
-							</div>
-						</li>
-					</ul>
+							<!-- CARD 4 - access -->
+							<li class="m-card">
+								<div class="m-img">
+									<img
+										src="./images/membership/access-Insiders-Launch-2308-Block-Standard-1.jpeg"
+										alt="more points"
+									/>
+								</div>
+								<div class="membership-content bg-blue">
+									<h3>More access</h3>
+									<span
+										>Inspiration, family play activities, communities and other
+										great stuff.</span
+									>
+								</div>
+							</li>
+						</ul>
 
-					<div class="hero-banner-button flex-center">
-						<a href="#" class="banner-button flex-center">
-							<span>Join now</span>
-							<a href="#"><i class="fa-solid fa-angle-right fa-xl"></i></a>
-						</a>
+						<div class="hero-banner-button flex-center">
+							<a href="#" class="banner-button flex-center">
+								<span>Join now</span>
+								<i class="fa-solid fa-angle-right fa-xl"></i>
+							</a>
 
-						<a href="#" class="banner-button">
-							<span>Sign in</span>
-							<i class="fa-solid fa-angle-right fa-xl"></i
-						></a>
+							<a href="#" class="banner-button">
+								<span>Sign in</span>
+								<i class="fa-solid fa-angle-right fa-xl"></i
+							></a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -843,10 +860,25 @@
 			<!-- DISNEY HERO SECTION -->
 			<section class="section disney-hero">
 				<div class="disney-hero-container">
-					<img
-						src="./images/40600-GWP-202309-Home-Hero-Standard-Small.webp"
-						alt="disney hero image"
-					/>
+					<div class="disney-img-container">
+						<picture>
+							<source
+								media="(min-width: 901px)"
+								srcset="./images/disney-Large.jpeg"
+							/>
+							<source
+								media="(min-width: 601px)"
+								srcset="./images/disney-medium.jpeg"
+							/>
+
+							<img
+								src="./images/40600-GWP-202309-Home-Hero-Standard-Small.webp"
+								alt="disney hero image"
+							/>
+						</picture>
+						<img src="./images/disney_logo_neg_300w.png" />
+					</div>
+
 					<div class="disney-hero-content">
 						<h3>Celebrate a passion for Disney</h3>
 						<span class="banner-tagline">
@@ -867,129 +899,131 @@
 			</section>
 
 			<!-- READ ABOUT SECTION -->
-			<section class="section read-about-carousel">
-				<h2 class="section-title">Read All About It</h2>
-				<div class="recommendation-container">
-					<ul class="flex-container">
-						<!-- CARD 1 -->
-						<li>
-							<a href="#">
-								<div class="read-card">
-									<div class="img-area">
-										<img
-											src="./images/read/230808_Design_brief_Project_Speed_Card_Content.jpeg"
-										/>
-									</div>
-									<div class="card-details">
-										<h3 class="card-title">
-											Why the Concorde is an engineering masterpiece
-										</h3>
-										<p>
-											As the LEGO® Icons Concorde prepares for take-off, we
-											talked to the LEGO designer about what made the supersonic
-											jet so ahead of its time
-										</p>
-
-										<a href="#" class="read-more flex-center">
-											<span>Read more</span>
+			<section class="section">
+				<div class="read-about-carousel">
+					<h2 class="section-title">Read All About It</h2>
+					<div class="recommendation-container">
+						<ul class="flex-container">
+							<!-- CARD 1 -->
+							<li>
+								<a href="#">
+									<div class="read-card">
+										<div class="img-area">
 											<img
-												class="svg svg-12"
-												src="./images/svg/arrow-right.svg"
+												src="./images/read/230808_Design_brief_Project_Speed_Card_Content.jpeg"
 											/>
-										</a>
-									</div>
-								</div>
-							</a>
-						</li>
+										</div>
+										<div class="card-details">
+											<h3 class="card-title">
+												Why the Concorde is an engineering masterpiece
+											</h3>
+											<p>
+												As the LEGO® Icons Concorde prepares for take-off, we
+												talked to the LEGO designer about what made the
+												supersonic jet so ahead of its time
+											</p>
 
-						<!-- CARD 2 -->
-						<li>
-							<a href="#">
-								<div class="read-card">
-									<div class="img-area">
-										<img
-											src="./images/read/230802_Design_brief_Project_Grub_Card_Content.jpeg"
-										/>
+											<a href="#" class="read-more flex-center">
+												<span>Read more</span>
+												<img
+													class="svg svg-12"
+													src="./images/svg/arrow-right.svg"
+												/>
+											</a>
+										</div>
 									</div>
-									<div class="card-details">
-										<h3 class="card-title">
-											Bold and beautiful: Amazing Creatures in the new LEGO®
-											Ideas The Insect Collection
-										</h3>
-										<p>
-											Critical critters? Our expert explains how these small but
-											beautiful creatures are more crucial than you might
-											think...
-										</p>
+								</a>
+							</li>
 
-										<a href="#" class="read-more flex-center">
-											<span>Read more</span>
+							<!-- CARD 2 -->
+							<li>
+								<a href="#">
+									<div class="read-card">
+										<div class="img-area">
 											<img
-												class="svg svg-12"
-												src="./images/svg/arrow-right.svg"
-										/></a>
-									</div>
-								</div>
-							</a>
-						</li>
+												src="./images/read/230802_Design_brief_Project_Grub_Card_Content.jpeg"
+											/>
+										</div>
+										<div class="card-details">
+											<h3 class="card-title">
+												Bold and beautiful: Amazing Creatures in the new LEGO®
+												Ideas The Insect Collection
+											</h3>
+											<p>
+												Critical critters? Our expert explains how these small
+												but beautiful creatures are more crucial than you might
+												think...
+											</p>
 
-						<!-- CARD 3 -->
-						<li>
-							<a href="#">
-								<div class="read-card">
-									<div class="img-area">
-										<img src="./images/read/Hero_Banner_-_Mobile.jpeg" />
+											<a href="#" class="read-more flex-center">
+												<span>Read more</span>
+												<img
+													class="svg svg-12"
+													src="./images/svg/arrow-right.svg"
+											/></a>
+										</div>
 									</div>
-									<div class="card-details">
-										<h3 class="card-title">
-											Best Educational Toys for 2-Year-Olds
-										</h3>
-										<p>
-											Our educational toys are specially designed to help
-											improve shape recognition, critical thinking and key
-											skills in 2-year-olds while learning to build.
-										</p>
+								</a>
+							</li>
 
-										<a href="#" class="read-more flex-center">
-											<span>Read more</span>
-											<img
-												class="svg svg-12"
-												src="./images/svg/arrow-right.svg"
-										/></a>
-									</div>
-								</div>
-							</a>
-						</li>
+							<!-- CARD 3 -->
+							<li>
+								<a href="#">
+									<div class="read-card">
+										<div class="img-area">
+											<img src="./images/read/Hero_Banner_-_Mobile.jpeg" />
+										</div>
+										<div class="card-details">
+											<h3 class="card-title">
+												Best Educational Toys for 2-Year-Olds
+											</h3>
+											<p>
+												Our educational toys are specially designed to help
+												improve shape recognition, critical thinking and key
+												skills in 2-year-olds while learning to build.
+											</p>
 
-						<!-- CARD 4 -->
-						<li>
-							<a href="#">
-								<div class="read-card">
-									<div class="img-area">
-										<img src="./images/read/startwarsHERO_-_Mobile.jpeg" />
+											<a href="#" class="read-more flex-center">
+												<span>Read more</span>
+												<img
+													class="svg svg-12"
+													src="./images/svg/arrow-right.svg"
+											/></a>
+										</div>
 									</div>
-									<div class="card-details">
-										<h3 class="card-title">
-											Best <i>Star Wars</i>&trade; Gift Ideas for Adults
-										</h3>
-										<p>
-											Use the power of the Force to give the greatest gifts in
-											the galaxy! These are some of the best
-											<i>Star Wars</i>&trade; gift ideas for adults that will
-											dominate their destiny.
-										</p>
+								</a>
+							</li>
 
-										<a href="#" class="read-more flex-center">
-											<span>Read more</span>
-											<img
-												class="svg svg-12"
-												src="./images/svg/arrow-right.svg"
-										/></a>
+							<!-- CARD 4 -->
+							<li>
+								<a href="#">
+									<div class="read-card">
+										<div class="img-area">
+											<img src="./images/read/startwarsHERO_-_Mobile.jpeg" />
+										</div>
+										<div class="card-details">
+											<h3 class="card-title">
+												Best <i>Star Wars</i>&trade; Gift Ideas for Adults
+											</h3>
+											<p>
+												Use the power of the Force to give the greatest gifts in
+												the galaxy! These are some of the best
+												<i>Star Wars</i>&trade; gift ideas for adults that will
+												dominate their destiny.
+											</p>
+
+											<a href="#" class="read-more flex-center">
+												<span>Read more</span>
+												<img
+													class="svg svg-12"
+													src="./images/svg/arrow-right.svg"
+											/></a>
+										</div>
 									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
@@ -1014,178 +1048,327 @@
 				</div>
 			</section>
 
-			<!-- FOOTER -->
 			<footer>
-				<!-- Links and email -->
-				<div class="footer-container">
-					<!-- FIRST SECTION -->
-					<div class="footer-links">
-						<div class="region">
-							<div class="country flex-container">
-								<img src="/images/brand-lego.svg" />
-								<a href="#" class="flex-container">
-									<i class="fa-solid fa-location-dot"></i>
-									<span>United Kingdom</span>
-								</a>
+				<!-- FOOTER SMALL SCREEN -->
+				<div class="footer-small">
+					<!-- Links and email -->
+					<div class="footer-container">
+						<!-- FIRST SECTION -->
+						<div class="footer-links">
+							<div class="region">
+								<div class="country flex-container">
+									<img src="/images/brand-lego.svg" />
+									<a href="#" class="flex-container">
+										<i class="fa-solid fa-location-dot"></i>
+										<span>United Kingdom</span>
+									</a>
+								</div>
+								<div class="links">
+									<a href="#">Gift Cards</a>
+									<a href="#">LEGO Catalogues</a>
+									<a href="#">Find a LEGO Store</a>
+								</div>
 							</div>
-							<div class="links">
-								<a href="#">Gift Cards</a>
-								<a href="#">LEGO Catalogues</a>
-								<a href="#">Find a LEGO Store</a>
+							<div class="email-subscription">
+								<h3>SUBSCRIBE TO DIGITAL MARKETING EMAILS</h3>
+								<div class="flex-container">
+									<label>
+										<input type="text" name="subscribe" />
+										<span>Your email address</span>
+									</label>
+									<a href="#">
+										<img
+											class="svg svg-16"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="dropdown-menu">
+								<!-- ABOUT US -->
+								<div class="button-wrapper">
+									<input
+										type="checkbox"
+										id="dropdown-about-button"
+										class="dropdown-button checkbox-button-general"
+									/>
+									<label for="dropdown-about-button" class="flex-container">
+										<h2 class="flex-container">
+											<span>ABOUT US</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</h2>
+									</label>
+									<div class="dropdown-content">
+										<ul>
+											<li><a href="#">About the LEGO Group</a></li>
+											<li><a href="#">LEGO&reg; news</a></li>
+											<li><a href="#">Sustainability</a></li>
+											<li>
+												<a href="#">Supply chain transparency statement</a>
+											</li>
+											<li><a href="#">LEGO product certification</a></li>
+											<li><a href="#">LEGO Jobs</a></li>
+											<li><a href="#">LEGO Compliance Line</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- SUPPORT -->
+								<div class="button-wrapper">
+									<input
+										type="checkbox"
+										id="dropdown-support-button"
+										class="dropdown-button checkbox-button-general"
+									/>
+									<label for="dropdown-support-button" class="flex-container">
+										<h2 class="flex-container">
+											<span>SUPPORT</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</h2>
+									</label>
+									<div class="dropdown-content">
+										<ul>
+											<li><a href="#">Contact us</a></li>
+											<li><a href="#">Find building instructions</a></li>
+											<li><a href="#">Replacement parts</a></li>
+											<li><a href="#">Deliveries and returns</a></li>
+											<li><a href="#">Payment methods</a></li>
+											<li><a href="#">Terms &amp; Conditions</a></li>
+											<li><a href="#">Product recallse</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- ATTRACTIONS -->
+								<div class="button-wrapper">
+									<input
+										type="checkbox"
+										id="dropdown-attractions-button"
+										class="dropdown-button checkbox-button-general"
+									/>
+									<label
+										for="dropdown-attractions-button"
+										class="flex-container"
+									>
+										<h2 class="flex-container">
+											<span>ATTRACTIONS</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</h2>
+									</label>
+									<div class="dropdown-content">
+										<ul>
+											<li><a href="#">LEGO&reg; House</a></li>
+											<li><a href="#">LEGOLAND&reg; Parks</a></li>
+											<li><a href="#">LEGOLAND Discovery Centers</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- MORE -->
+								<div class="button-wrapper">
+									<input
+										type="checkbox"
+										id="dropdown-more-button"
+										class="dropdown-button checkbox-button-general"
+									/>
+									<label for="dropdown-more-button" class="flex-container">
+										<h2 class="flex-container">
+											<span>MORE FROM US</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</h2>
+									</label>
+									<div class="dropdown-content">
+										<ul>
+											<li><a href="#">LEGO&reg; LIFE</a></li>
+											<li><a href="#">LEGO Education</a></li>
+											<li><a href="#">LEGO Ideas</a></li>
+											<li><a href="#">LEGO Foundation</a></li>
+											<li><a href="#">Affiliate Program</a></li>
+											<li><a href="#">Student Offers</a></li>
+											<li><a href="#">LEGO&reg; Braille Bricks</a></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="email-subscription">
-							<h3>SUBSCRIBE TO DIGITAL MARKETING EMAILS</h3>
+					</div>
+
+					<!-- Socials -->
+					<div class="footer-container">
+						<!-- SECOND SECTION -->
+						<div class="footer-social">
+							<h3>FOLLOW US</h3>
+							<div class="social-icons flex-container">
+								<i class="fa-brands fa-facebook-f"></i>
+								<i class="fa-brands fa-twitter"></i>
+								<i class="fa-brands fa-instagram"></i>
+								<i class="fa-brands fa-youtube"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- Legal -->
+					<div class="footer-container">
+						<!-- THIRD SECTION -->
+						<div class="footer-legal">
+							<ul class="legal-links flex-container">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Cookies</a></li>
+								<li><a href="#">Legal notice</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Digital wellbeing</a></li>
+								<li><a href="#">Accessibility</a></li>
+								<li><a href="#">Cookie Settings</a></li>
+							</ul>
+							<p>
+								LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or
+								older to purchase online. LEGO, the LEGO logo, the Minifigure,
+								DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and
+								MIXELS are trademarks and copyrights of the LEGO Group. ©2022
+								The LEGO Group. All rights reserved. Use of this site signifies
+								your agreement to the Terms of Use.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- FOOTER BIG SCREEN -->
+				<div class="footer-big section">
+					<!-- Links and email -->
+					<div class="footer-container">
+						<!-- FIRST SECTION -->
+						<div class="footer-links">
 							<div class="flex-container">
-								<label>
-									<input type="text" name="subscribe" />
-									<span>Your email address</span>
-								</label>
-								<a href="#">
-									<img class="svg svg-16" src="./images/svg/arrow-right.svg" />
-								</a>
-							</div>
-						</div>
-
-						<div class="dropdown-menu">
-							<!-- ABOUT US -->
-							<div class="button-wrapper">
-								<input
-									type="checkbox"
-									id="dropdown-about-button"
-									class="dropdown-button checkbox-button-general"
-								/>
-								<label for="dropdown-about-button" class="flex-container">
-									<h2 class="flex-container">
-										<span>ABOUT US</span>
-										<i class="fa-solid fa-angle-down"></i>
-									</h2>
-								</label>
-								<div class="dropdown-content">
-									<ul>
-										<li><a href="#">About the LEGO Group</a></li>
-										<li><a href="#">LEGO&reg; news</a></li>
-										<li><a href="#">Sustainability</a></li>
-										<li><a href="#">Supply chain transparency statement</a></li>
-										<li><a href="#">LEGO product certification</a></li>
-										<li><a href="#">LEGO Jobs</a></li>
-										<li><a href="#">LEGO Compliance Line</a></li>
-									</ul>
+								<div class="region">
+									<div class="country flex-container">
+										<img src="/images/brand-lego.svg" />
+										<a href="#" class="flex-container">
+											<i class="fa-solid fa-location-dot"></i>
+											<span>United Kingdom</span>
+										</a>
+									</div>
+									<div class="links">
+										<a href="#">Gift Cards</a>
+										<a href="#">LEGO Catalogues</a>
+										<a href="#">Find a LEGO Store</a>
+									</div>
 								</div>
-							</div>
 
-							<!-- SUPPORT -->
-							<div class="button-wrapper">
-								<input
-									type="checkbox"
-									id="dropdown-support-button"
-									class="dropdown-button checkbox-button-general"
-								/>
-								<label for="dropdown-support-button" class="flex-container">
-									<h2 class="flex-container">
-										<span>SUPPORT</span>
-										<i class="fa-solid fa-angle-down"></i>
-									</h2>
-								</label>
-								<div class="dropdown-content">
-									<ul>
-										<li><a href="#">Contact us</a></li>
-										<li><a href="#">Find building instructions</a></li>
-										<li><a href="#">Replacement parts</a></li>
-										<li><a href="#">Deliveries and returns</a></li>
-										<li><a href="#">Payment methods</a></li>
-										<li><a href="#">Terms &amp; Conditions</a></li>
-										<li><a href="#">Product recallse</a></li>
-									</ul>
-								</div>
-							</div>
+								<div class="dropdown-menu flex-container">
+									<!-- ABOUT US -->
 
-							<!-- ATTRACTIONS -->
-							<div class="button-wrapper">
-								<input
-									type="checkbox"
-									id="dropdown-attractions-button"
-									class="dropdown-button checkbox-button-general"
-								/>
-								<label for="dropdown-attractions-button" class="flex-container">
-									<h2 class="flex-container">
-										<span>ATTRACTIONS</span>
-										<i class="fa-solid fa-angle-down"></i>
-									</h2>
-								</label>
-								<div class="dropdown-content">
-									<ul>
-										<li><a href="#">LEGO&reg; House</a></li>
-										<li><a href="#">LEGOLAND&reg; Parks</a></li>
-										<li><a href="#">LEGOLAND Discovery Centers</a></li>
-									</ul>
-								</div>
-							</div>
+									<div class="links-wrapper">
+										<h3>ABOUT US</h3>
+										<ul>
+											<li><a href="#">About the LEGO Group</a></li>
+											<li><a href="#">LEGO&reg; news</a></li>
+											<li><a href="#">Sustainability</a></li>
+											<li>
+												<a href="#">Supply chain transparency statement</a>
+											</li>
+											<li><a href="#">LEGO product certification</a></li>
+											<li><a href="#">LEGO Jobs</a></li>
+											<li><a href="#">LEGO Compliance Line</a></li>
+										</ul>
+									</div>
 
-							<!-- MORE -->
-							<div class="button-wrapper">
-								<input
-									type="checkbox"
-									id="dropdown-more-button"
-									class="dropdown-button checkbox-button-general"
-								/>
-								<label for="dropdown-more-button" class="flex-container">
-									<h2 class="flex-container">
-										<span>MORE FROM US</span>
-										<i class="fa-solid fa-angle-down"></i>
-									</h2>
-								</label>
-								<div class="dropdown-content">
-									<ul>
-										<li><a href="#">LEGO&reg; LIFE</a></li>
-										<li><a href="#">LEGO Education</a></li>
-										<li><a href="#">LEGO Ideas</a></li>
-										<li><a href="#">LEGO Foundation</a></li>
-										<li><a href="#">Affiliate Program</a></li>
-										<li><a href="#">Student Offers</a></li>
-										<li><a href="#">LEGO&reg; Braille Bricks</a></li>
-									</ul>
+									<!-- SUPPORT -->
+									<div class="links-wrapper">
+										<h3>SUPPORT</h3>
+										<ul>
+											<li><a href="#">Contact us</a></li>
+											<li><a href="#">Find building instructions</a></li>
+											<li><a href="#">Replacement parts</a></li>
+											<li><a href="#">Deliveries and returns</a></li>
+											<li><a href="#">Payment methods</a></li>
+											<li><a href="#">Terms &amp; Conditions</a></li>
+											<li><a href="#">Product recallse</a></li>
+										</ul>
+									</div>
+
+									<!-- ATTRACTIONS -->
+									<div class="links-wrapper">
+										<h3>ATTRACTIONS</h3>
+										<ul>
+											<li><a href="#">LEGO&reg; House</a></li>
+											<li><a href="#">LEGOLAND&reg; Parks</a></li>
+											<li><a href="#">LEGOLAND Discovery Centers</a></li>
+										</ul>
+									</div>
+
+									<!-- MORE -->
+									<div class="links-wrapper">
+										<h3>MORE FROM US</h3>
+										<ul>
+											<li><a href="#">LEGO&reg; LIFE</a></li>
+											<li><a href="#">LEGO Education</a></li>
+											<li><a href="#">LEGO Ideas</a></li>
+											<li><a href="#">LEGO Foundation</a></li>
+											<li><a href="#">Affiliate Program</a></li>
+											<li><a href="#">Student Offers</a></li>
+											<li><a href="#">LEGO&reg; Braille Bricks</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Socials -->
-				<div class="footer-container">
-					<!-- SECOND SECTION -->
-					<div class="footer-social">
-						<h3>FOLLOW US</h3>
-						<div class="social-icons flex-container">
-							<i class="fa-brands fa-facebook-f"></i>
-							<i class="fa-brands fa-twitter"></i>
-							<i class="fa-brands fa-instagram"></i>
-							<i class="fa-brands fa-youtube"></i>
+					<!-- Socials -->
+					<div class="footer-container">
+						<!-- SECOND SECTION -->
+						<div class="email-social flex-container">
+							<div class="email-subscription">
+								<h3>SUBSCRIBE TO DIGITAL MARKETING EMAILS</h3>
+								<div class="flex-container">
+									<label>
+										<input type="text" name="subscribe" />
+										<span>Your email address</span>
+									</label>
+									<a href="#">
+										<img
+											class="svg svg-16"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</div>
+							</div>
+
+							<div class="footer-social">
+								<h3>FOLLOW US</h3>
+								<div class="social-icons flex-container">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-twitter"></i>
+									<i class="fa-brands fa-instagram"></i>
+									<i class="fa-brands fa-youtube"></i>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Legal -->
-				<div class="footer-container">
-					<!-- THIRD SECTION -->
-					<div class="footer-legal">
-						<ul class="legal-links flex-container">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Cookies</a></li>
-							<li><a href="#">Legal notice</a></li>
-							<li><a href="#">Terms of Use</a></li>
-							<li><a href="#">Digital wellbeing</a></li>
-							<li><a href="#">Accessibility</a></li>
-							<li><a href="#">Cookie Settings</a></li>
-						</ul>
-						<p>
-							LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or
-							older to purchase online. LEGO, the LEGO logo, the Minifigure,
-							DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and MIXELS
-							are trademarks and copyrights of the LEGO Group. ©2022 The LEGO
-							Group. All rights reserved. Use of this site signifies your
-							agreement to the Terms of Use.
-						</p>
+					<!-- Legal -->
+					<div class="footer-container">
+						<!-- THIRD SECTION -->
+						<div class="footer-legal">
+							<ul class="legal-links flex-container">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Cookies</a></li>
+								<li><a href="#">Legal notice</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Digital wellbeing</a></li>
+								<li><a href="#">Accessibility</a></li>
+								<li><a href="#">Cookie Settings</a></li>
+							</ul>
+							<p>
+								LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or
+								older to purchase online. LEGO, the LEGO logo, the Minifigure,
+								DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS and
+								MIXELS are trademarks and copyrights of the LEGO Group. ©2022
+								The LEGO Group. All rights reserved. Use of this site signifies
+								your agreement to the Terms of Use.
+							</p>
+						</div>
 					</div>
 				</div>
 			</footer>
