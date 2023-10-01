@@ -531,6 +531,10 @@ body:has(.burger-menu-input:checked) {
   font-weight: 500;
   font-size: 1rem;
 }
+.desktop-nav-container .navbar .nav-link label:hover,
+.desktop-nav-container .navbar .nav-link label:focus-within {
+  border-bottom: 3px solid rgb(29, 29, 29);
+}
 .desktop-nav-container .cart-container {
   gap: 30px;
 }
@@ -540,7 +544,6 @@ body:has(.burger-menu-input:checked) {
   border-radius: 50%;
 }
 
-/* NAV CART */
 /* HERO SECTION */
 .section {
   max-width: 100rem;
@@ -1370,6 +1373,40 @@ footer {
   }
   .mobile-header {
     background-color: #f8f8f8;
+  }
+  /* MAIN NAV MENUS OPEN */
+  .navbar {
+    z-index: 2;
+  }
+  #desktop-panel-shop:checked ~ .desktop-menu-open,
+  #desktop-panel-discover:checked ~ .desktop-menu-open,
+  #desktop-panel-help:checked ~ .desktop-menu-open {
+    transform: translateX(0%);
+    transition: all 300ms ease;
+  }
+  #desktop-panel-close:checked ~ .desktop-menu-open {
+    transform: translateX(-100%);
+    transition: all 300ms ease;
+  }
+  .desktop-header {
+    background-color: #ffcf00;
+    display: block;
+  }
+  .desktop-header .desktop-menu-open {
+    position: relative;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 37rem;
+  }
+  .desktop-header .desktop-menu-open .nav-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
   }
   .hero-logo-mobile {
     display: none;
