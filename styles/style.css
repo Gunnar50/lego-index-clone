@@ -86,12 +86,17 @@ header {
 .top-bar-mobile {
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+  height: 3.2rem;
   padding: 1rem;
   background-color: rgb(248, 248, 248);
 }
 
 .promotion-tag {
   gap: 2rem;
+}
+.promotion-tag p {
+  text-align: center;
 }
 .promotion-tag a {
   color: rgb(11, 117, 187);
@@ -180,16 +185,20 @@ body:has(.burger-menu-input:checked) {
   overflow: hidden;
 }
 
+.burger-menu-input:checked ~ .nav-closed .nav-container-mobile {
+  position: initial;
+}
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile .menu-text {
   z-index: 5;
-  top: -47px;
+  top: 4px;
   left: 30px;
   transform: scale(2);
   transition: all 100ms ease-out;
 }
 .burger-menu-input:checked ~ .nav-closed .nav-container-mobile label {
-  left: 90%;
-  top: -40px;
+  left: auto;
+  right: 1rem;
+  top: 6px;
   width: 46px;
   height: 30px;
   transition: all 300ms ease-out;
@@ -1257,8 +1266,8 @@ footer {
 
 @media screen and (min-width: 601px) {
   .burger-menu-input:checked ~ .nav-closed .nav-container-mobile label {
-    left: 21rem;
-    top: -40px;
+    left: 20.5rem;
+    top: 6px;
     transition: all 300ms ease-out;
   }
   .burger-menu-input:checked ~ .nav-open {
@@ -1385,6 +1394,7 @@ footer {
     font-size: 2rem;
   }
   .top-bar-mobile {
+    display: flex !important;
     padding: 1rem 2rem;
   }
   .top-bar-mobile .play-zone {

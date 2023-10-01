@@ -8,8 +8,8 @@
 	.burger-menu-input:checked {
 		& ~ .nav-closed .nav-container-mobile {
 			label {
-				left: 21rem;
-				top: -40px;
+				left: 20.5rem;
+				top: 6px;
 				transition: all 300ms ease-out;
 			}
 		}
@@ -163,6 +163,7 @@
 	}
 	// top bar
 	.top-bar-mobile {
+		display: flex !important;
 		padding: 1rem 2rem;
 		.play-zone {
 			display: initial;
