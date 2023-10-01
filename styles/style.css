@@ -39,6 +39,7 @@ a {
 }
 
 .checkbox-button-general {
+  display: none;
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -535,12 +536,43 @@ body:has(.burger-menu-input:checked) {
   border-bottom: 3px solid rgb(29, 29, 29);
 }
 .desktop-nav-container .cart-container {
+  z-index: 2;
   gap: 30px;
 }
 .desktop-nav-container .cart-container .search-bar {
   background-color: #fff;
   padding: 0.8rem;
   border-radius: 50%;
+}
+
+.search-container {
+  position: relative;
+  height: 100%;
+  width: 20px;
+}
+.search-container .search-box input {
+  display: none;
+}
+
+#search:checked ~ .search-container .search-box {
+  position: absolute;
+  background-color: #fff;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5215686275);
+  left: -237px;
+  width: 330px;
+  border-radius: 30px;
+}
+#search:checked ~ .search-container .search-box input {
+  display: block;
+  transform: translateX(40px);
+  border: none;
+}
+#search:checked ~ .search-container .search-box input:focus-visible {
+  outline: none;
+}
+#search:checked ~ .label-cursor .search-bar {
+  transform: translateX(-285px);
 }
 
 /* HERO SECTION */
@@ -739,13 +771,18 @@ body:has(.burger-menu-input:checked) {
 }
 
 .card-order-button {
+  cursor: pointer;
   background-color: #fd8024;
+  border: 2px solid #fd8024;
   width: 100%;
   padding: 1rem;
   font-size: 0.85rem;
   font-weight: 600;
   border-radius: 5px;
   text-align: center;
+}
+.card-order-button:hover {
+  background-color: #fff;
 }
 
 img[class=two-lines] {
@@ -972,6 +1009,13 @@ img[class=two-lines] {
   text-decoration: underline;
 }
 
+.read-more-hover {
+  cursor: pointer;
+}
+.read-more-hover:hover .read-more {
+  text-decoration: underline;
+}
+
 .tagline-content {
   padding: 1.25rem 0;
 }
@@ -1014,6 +1058,7 @@ footer {
 }
 
 .country {
+  display: block;
   margin-bottom: 1rem;
 }
 .country img {
@@ -1021,8 +1066,10 @@ footer {
   width: 70px;
   height: 70px;
   margin-right: 1rem;
+  margin-bottom: 1.5rem;
 }
 .country a {
+  display: inline;
   margin-bottom: 1.9rem;
   align-items: center;
   background-color: #18152d;
@@ -1186,6 +1233,7 @@ footer {
   padding: 10px;
   border-radius: 50%;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .footer-legal {
@@ -1198,7 +1246,7 @@ footer {
 .footer-legal ul a {
   color: #fff;
 }
-.footer-legal ul ahover {
+.footer-legal ul a:hover {
   text-decoration: underline;
 }
 .footer-legal p {
