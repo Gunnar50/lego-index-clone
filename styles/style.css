@@ -1458,6 +1458,9 @@ footer {
     pointer-events: auto;
     z-index: 1;
   }
+  #desktop-panel-shop:checked ~ .cart-container {
+    z-index: 0;
+  }
   body:has(#desktop-panel-discover:checked) {
     overflow: hidden;
   }
@@ -1484,6 +1487,9 @@ footer {
     pointer-events: auto;
     z-index: 1;
   }
+  #desktop-panel-discover:checked ~ .cart-container {
+    z-index: 0;
+  }
   body:has(#desktop-panel-help:checked) {
     overflow: hidden;
   }
@@ -1509,6 +1515,9 @@ footer {
     transition: opacity 300ms ease;
     pointer-events: auto;
     z-index: 1;
+  }
+  #desktop-panel-help:checked ~ .cart-container {
+    z-index: 0;
   }
   .desktop-header {
     background-color: #ffcf00;
