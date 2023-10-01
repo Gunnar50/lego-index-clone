@@ -1,5 +1,5 @@
 // first breakpoint is 601px for image and content
-//  then 901px for nav bar to change to desktop and content get bigger
+//  then 901px for nav bar to change to desktop and content gets bigger
 // content has max width of 100rem
 
 // Medium screens / Tablet
@@ -254,6 +254,9 @@
 				transition: opacity 300ms ease;
 				pointer-events: auto;
 				z-index: 1;
+			}
+			& ~ .cart-container {
+				z-index: 0;
 			}
 		}
 	}
