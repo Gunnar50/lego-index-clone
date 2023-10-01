@@ -569,6 +569,10 @@ body:has(.burger-menu-input:checked) {
 			margin-right: 30px;
 			font-weight: 500;
 			font-size: 1rem;
+			label:hover,
+			label:focus-within {
+				border-bottom: 3px solid rgb(29, 29, 29);
+			}
 		}
 	}
 	.cart-container {
@@ -580,8 +584,6 @@ body:has(.burger-menu-input:checked) {
 		}
 	}
 }
-
-/* NAV CART */
 
 /* HERO SECTION */
 
