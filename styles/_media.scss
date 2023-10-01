@@ -209,6 +209,49 @@
 		background-color: #f8f8f8;
 	}
 
+	/* MAIN NAV MENUS OPEN */
+	.navbar {
+		z-index: 2;
+	}
+
+	#desktop-panel-shop:checked,
+	#desktop-panel-discover:checked,
+	#desktop-panel-help:checked {
+		& ~ .desktop-menu-open {
+			transform: translateX(0%);
+			transition: all 300ms ease;
+		}
+	}
+
+	#desktop-panel-close:checked {
+		& ~ .desktop-menu-open {
+			transform: translateX(-100%);
+			transition: all 300ms ease;
+		}
+	}
+
+	.desktop-header {
+		background-color: #ffcf00;
+		display: block;
+		.desktop-menu-open {
+			position: relative;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+			max-width: 37rem;
+
+			.nav-close {
+				position: absolute;
+				top: 30px;
+				right: 40px;
+			}
+		}
+	}
+
 	// first hero container
 	.hero-logo-mobile {
 		display: none;

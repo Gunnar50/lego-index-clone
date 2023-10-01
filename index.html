@@ -87,66 +87,300 @@
 						class="burger-menu-input checkbox-button-general"
 						type="checkbox"
 					/>
+					<!-- INPUTS FOR SUB MENUS -->
+					<!-- SHOP -->
+					<input
+						id="panel-shop-open"
+						class="checkbox-button-general"
+						type="radio"
+						name="shop-panel"
+					/>
+					<input
+						id="panel-shop-close"
+						class="checkbox-button-general"
+						type="radio"
+						name="shop-panel"
+						checked
+					/>
+					<label
+						for="panel-shop-close"
+						class="shop-label panel-close-button label-cursor"
+					></label>
+
+					<!-- DISCOVER -->
+					<input
+						id="panel-discover-open"
+						class="checkbox-button-general"
+						type="radio"
+						name="discover-panel"
+					/>
+					<input
+						id="panel-discover-close"
+						class="checkbox-button-general"
+						type="radio"
+						name="discover-panel"
+						checked
+					/>
+					<label
+						for="panel-discover-close"
+						class="discover-label panel-close-button label-cursor"
+					></label>
+
+					<!-- HELP -->
+					<input
+						id="panel-help-open"
+						class="checkbox-button-general"
+						type="radio"
+						name="help-panel"
+					/>
+					<input
+						id="panel-help-close"
+						class="checkbox-button-general"
+						type="radio"
+						name="help-panel"
+						checked
+					/>
+					<label
+						for="panel-help-close"
+						class="help-label panel-close-button label-cursor"
+					></label>
+
 					<!-- Nav Opened -->
 					<div class="mobile-overlay"></div>
 					<div class="nav-open">
-						<div class="nav-open-top">
-							<img class="svg svg-14" src="./images/svg/arrow-right.svg" />
-						</div>
-						<div class="nav-open-link-section">
-							<a href="#">
-								<div class="nav-open-play-button flex-center">
+						<div class="main-panel">
+							<div class="nav-open-top">
+								<img class="svg svg-14" src="./images/svg/arrow-right.svg" />
+							</div>
+							<div class="nav-open-link-section">
+								<a href="#" class="nav-open-play-button flex-center">
 									<img class="svg" src="./images/svg/play-arrow.svg" />
 									<span>PLAY ZONE</span>
-								</div></a
-							>
+								</a>
 
-							<ul class="main">
-								<li><a href="#" class="flex-center">HOME</a></li>
+								<ul class="main">
+									<li><a href="/" class="flex-center">HOME</a></li>
+									<li>
+										<label for="panel-shop-open" class="label-cursor">
+											<a class="flex-center">
+												SHOP
+												<img
+													class="svg svg-14"
+													src="./images/svg/arrow-right.svg"
+												/>
+											</a>
+										</label>
+									</li>
+									<li>
+										<label for="panel-discover-open" class="label-cursor">
+											<a class="flex-center"
+												>DISCOVER<img
+													class="svg svg-14"
+													src="./images/svg/arrow-right.svg" /></a
+										></label>
+									</li>
+									<li>
+										<label for="panel-help-open" class="label-cursor">
+											<a class="flex-center"
+												>HELP<img
+													class="svg svg-14"
+													src="./images/svg/arrow-right.svg" /></a
+										></label>
+									</li>
+								</ul>
+								<ul class="secondary">
+									<li>
+										<a href="#" class="flex-center"
+											><img
+												class="svg svg-22"
+												src="./images/svg/lego-head.svg"
+											/>
+											Sign In</a
+										>
+									</li>
+									<li>
+										<a href="#" class="flex-center"
+											><img class="svg svg-22" src="./images/insidersOut.svg" />
+											Join Insiders</a
+										>
+									</li>
+									<li><a href="#" class="flex-center">My wishlist</a></li>
+									<li><a href="#" class="flex-center">My bag (0)</a></li>
+									<li>
+										<a href="#" class="flex-center"
+											><img
+												class="svg svg-16"
+												src="./images/svg/location.svg"
+											/>United Kingdom</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="shop-panel submenu-panel">
+							<div class="panel-title">SHOP</div>
+							<ul>
 								<li>
 									<a href="#" class="flex-center">
-										SHOP<img
+										Sets by theme
+										<img
 											class="svg svg-14"
 											src="./images/svg/arrow-right.svg"
-									/></a>
+										/>
+									</a>
 								</li>
 								<li>
-									<a href="#" class="flex-center"
-										>DISCOVER<img
+									<a href="#" class="flex-center">
+										Ages
+										<img
 											class="svg svg-14"
 											src="./images/svg/arrow-right.svg"
-									/></a>
+										/>
+									</a>
 								</li>
 								<li>
-									<a href="#" class="flex-center"
-										>HELP<img
+									<a href="#" class="flex-center">
+										Price ranges
+										<img
 											class="svg svg-14"
 											src="./images/svg/arrow-right.svg"
-									/></a>
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										LEGO Merchandise
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Interests
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Pick and Build
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Exclusive </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> New </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Bestsellers </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Home decor </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Offer &amp; Sale </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Gift Cards </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Coming soon </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Last chance to buy </a>
 								</li>
 							</ul>
-							<ul class="secondary">
+						</div>
+
+						<div class="discover-panel submenu-panel">
+							<div class="panel-title">DISCOVER</div>
+							<ul>
 								<li>
-									<a href="#" class="flex-center"
-										><img class="svg svg-22" src="./images/svg/lego-head.svg" />
-										Sign In</a
-									>
+									<a href="#" class="flex-center">
+										Our Values
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
 								</li>
 								<li>
-									<a href="#" class="flex-center"
-										><img class="svg svg-22" src="./images/insidersOut.svg" />
-										Join Insiders</a
-									>
+									<a href="#" class="flex-center">
+										Our Apps
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
 								</li>
-								<li><a href="#" class="flex-center">My wishlist</a></li>
-								<li><a href="#" class="flex-center">My bag (0)</a></li>
 								<li>
-									<a href="#" class="flex-center"
-										><img
-											class="svg svg-16"
-											src="./images/svg/location.svg"
-										/>United Kingdom</a
-									>
+									<a href="#" class="flex-center">
+										Our Magazines
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> All LEGO Themes </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> All LEGO Interests </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Adults Welcome </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> For Families </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; Insiders </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; Mosaic Maker </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; gift ideas </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="help-panel submenu-panel">
+							<div class="panel-title">HELP</div>
+							<ul>
+								<li>
+									<a href="#" class="flex-center"> Check order status </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Delivery &amp; Returns </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Find a LEGO Store </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Find Building Instructions
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Common questions </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Contact us </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Replace Parts </a>
 								</li>
 							</ul>
 						</div>
@@ -188,16 +422,67 @@
 			<div class="desktop-header">
 				<!-- Desktop only nav bar -->
 				<div class="section desktop-nav-container flex-container">
+					<!-- INPUTS FOR DESKTOP MENU OPEN -->
+					<input
+						id="desktop-panel-shop"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-discover"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-help"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-close"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+						checked
+					/>
+
 					<nav class="navbar flex-container">
 						<a href="/" class="brand">
 							<img src="/images/brand-lego.svg" />
 						</a>
 						<ul class="navbar-links flex-center">
-							<li class="nav-link"><a href="#">SHOP</a></li>
-							<li class="nav-link"><a href="#">DISCOVER</a></li>
-							<li class="nav-link"><a href="#">HELP</a></li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									SHOP
+								</label>
+							</li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									DISCOVER
+								</label>
+							</li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									HELP
+								</label>
+							</li>
 						</ul>
 					</nav>
+
+					<!-- MENUS OPEN -->
+					<div class="desktop-menu-open">
+						<div class="nav-close">
+							<label for="desktop-panel-close" class="label-cursor">
+								<img class="svg svg-18" src="./images/svg/close.svg" />
+							</label>
+						</div>
+						<div class="desktop-shop"></div>
+						<div class="desktop-discover"></div>
+						<div class="desktop-help"></div>
+					</div>
 
 					<div class="cart-container flex-center">
 						<div class="search-bar">
