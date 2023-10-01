@@ -422,16 +422,67 @@
 			<div class="desktop-header">
 				<!-- Desktop only nav bar -->
 				<div class="section desktop-nav-container flex-container">
+					<!-- INPUTS FOR DESKTOP MENU OPEN -->
+					<input
+						id="desktop-panel-shop"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-discover"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-help"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+					/>
+					<input
+						id="desktop-panel-close"
+						class="checkbox-button-general"
+						type="radio"
+						name="desktop-panel"
+						checked
+					/>
+
 					<nav class="navbar flex-container">
 						<a href="/" class="brand">
 							<img src="/images/brand-lego.svg" />
 						</a>
 						<ul class="navbar-links flex-center">
-							<li class="nav-link"><a href="#">SHOP</a></li>
-							<li class="nav-link"><a href="#">DISCOVER</a></li>
-							<li class="nav-link"><a href="#">HELP</a></li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									SHOP
+								</label>
+							</li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									DISCOVER
+								</label>
+							</li>
+							<li class="nav-link">
+								<label for="desktop-panel-shop" class="label-cursor">
+									HELP
+								</label>
+							</li>
 						</ul>
 					</nav>
+
+					<!-- MENUS OPEN -->
+					<div class="desktop-menu-open">
+						<div class="nav-close">
+							<label for="desktop-panel-close" class="label-cursor">
+								<img class="svg svg-18" src="./images/svg/close.svg" />
+							</label>
+						</div>
+						<div class="desktop-shop"></div>
+						<div class="desktop-discover"></div>
+						<div class="desktop-help"></div>
+					</div>
 
 					<div class="cart-container flex-center">
 						<div class="search-bar">
