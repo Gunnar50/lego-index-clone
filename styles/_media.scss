@@ -214,27 +214,57 @@
 		z-index: 2;
 	}
 
-	#desktop-panel-shop:checked,
-	#desktop-panel-discover:checked,
-	#desktop-panel-help:checked {
-		& ~ .desktop-menu-open {
-			transform: translateX(0%);
-			transition: all 300ms ease;
-		}
-	}
-
 	#desktop-panel-close:checked {
 		& ~ .desktop-menu-open {
 			transform: translateX(-100%);
 			transition: all 300ms ease;
 		}
+		& ~ .desktop-overlay {
+			display: none;
+		}
 	}
+
+	@mixin desktop-menu-open($panel) {
+		body:has(#desktop-panel-#{$panel}:checked) {
+			overflow: hidden;
+		}
+		#desktop-panel-#{$panel}:checked {
+			& ~ .desktop-menu-open {
+				transform: translateX(0%);
+				transition: all 300ms ease;
+				.relative {
+					position: relative;
+					max-width: 100rem;
+					margin: 0 auto;
+					height: 100%;
+				}
+				.desktop-#{$panel} {
+					z-index: 8;
+				}
+			}
+			& ~ .navbar {
+				label[for="desktop-panel-#{$panel}"] {
+					border-bottom: 3px solid rgb(29, 29, 29);
+				}
+			}
+			& ~ .desktop-overlay {
+				display: block;
+				opacity: 0.5;
+				transition: opacity 300ms ease;
+				pointer-events: auto;
+				z-index: 1;
+			}
+		}
+	}
+
+	@include desktop-menu-open(shop);
+	@include desktop-menu-open(discover);
+	@include desktop-menu-open(help);
 
 	.desktop-header {
 		background-color: #ffcf00;
 		display: block;
 		.desktop-menu-open {
-			position: relative;
 			background-color: #fff;
 			position: absolute;
 			top: 0;
@@ -248,6 +278,24 @@
 				position: absolute;
 				top: 30px;
 				right: 40px;
+			}
+		}
+		.desktop-shop,
+		.desktop-discover,
+		.desktop-help {
+			z-index: 6;
+			position: absolute;
+			top: 130px;
+			left: 116px;
+			background-color: #fff;
+			width: 15rem;
+			height: 100%;
+			overflow: hidden;
+
+			a {
+				font-size: 0.9rem;
+				justify-content: space-between;
+				padding: 0.6rem 1.2rem;
 			}
 		}
 	}
@@ -388,6 +436,10 @@
 		}
 	}
 
+	.desktop-header .desktop-menu-open {
+		max-width: 50%;
+	}
+
 	.membership-container ul {
 		justify-content: space-between;
 	}
@@ -419,6 +471,17 @@
 					margin-bottom: 1.7rem;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 100rem) {
+	.desktop-header {
+		.desktop-shop,
+		.desktop-discover,
+		.desktop-help {
+			left: auto;
+			right: 444px;
 		}
 	}
 }

@@ -39,6 +39,7 @@ a {
 }
 
 .checkbox-button-general {
+  display: none;
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -161,7 +162,7 @@ header {
   z-index: 6;
 }
 
-.mobile-overlay {
+.overlay {
   display: block;
   width: 100%;
   height: 100%;
@@ -531,17 +532,47 @@ body:has(.burger-menu-input:checked) {
   font-weight: 500;
   font-size: 1rem;
 }
-.desktop-nav-container .navbar .nav-link label:hover,
-.desktop-nav-container .navbar .nav-link label:focus-within {
+.desktop-nav-container .navbar .nav-link label:hover {
   border-bottom: 3px solid rgb(29, 29, 29);
 }
 .desktop-nav-container .cart-container {
+  z-index: 2;
   gap: 30px;
 }
 .desktop-nav-container .cart-container .search-bar {
   background-color: #fff;
   padding: 0.8rem;
   border-radius: 50%;
+}
+
+.search-container {
+  position: relative;
+  height: 100%;
+  width: 20px;
+}
+.search-container .search-box input {
+  display: none;
+}
+
+#search:checked ~ .search-container .search-box {
+  position: absolute;
+  background-color: #fff;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5215686275);
+  left: -237px;
+  width: 330px;
+  border-radius: 30px;
+}
+#search:checked ~ .search-container .search-box input {
+  display: block;
+  transform: translateX(40px);
+  border: none;
+}
+#search:checked ~ .search-container .search-box input:focus-visible {
+  outline: none;
+}
+#search:checked ~ .label-cursor .search-bar {
+  transform: translateX(-285px);
 }
 
 /* HERO SECTION */
@@ -740,13 +771,18 @@ body:has(.burger-menu-input:checked) {
 }
 
 .card-order-button {
+  cursor: pointer;
   background-color: #fd8024;
+  border: 2px solid #fd8024;
   width: 100%;
   padding: 1rem;
   font-size: 0.85rem;
   font-weight: 600;
   border-radius: 5px;
   text-align: center;
+}
+.card-order-button:hover {
+  background-color: #fff;
 }
 
 img[class=two-lines] {
@@ -973,6 +1009,13 @@ img[class=two-lines] {
   text-decoration: underline;
 }
 
+.read-more-hover {
+  cursor: pointer;
+}
+.read-more-hover:hover .read-more {
+  text-decoration: underline;
+}
+
 .tagline-content {
   padding: 1.25rem 0;
 }
@@ -1015,6 +1058,7 @@ footer {
 }
 
 .country {
+  display: block;
   margin-bottom: 1rem;
 }
 .country img {
@@ -1022,8 +1066,10 @@ footer {
   width: 70px;
   height: 70px;
   margin-right: 1rem;
+  margin-bottom: 1.5rem;
 }
 .country a {
+  display: inline;
   margin-bottom: 1.9rem;
   align-items: center;
   background-color: #18152d;
@@ -1187,6 +1233,7 @@ footer {
   padding: 10px;
   border-radius: 50%;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .footer-legal {
@@ -1199,7 +1246,7 @@ footer {
 .footer-legal ul a {
   color: #fff;
 }
-.footer-legal ul ahover {
+.footer-legal ul a:hover {
   text-decoration: underline;
 }
 .footer-legal p {
@@ -1378,22 +1425,96 @@ footer {
   .navbar {
     z-index: 2;
   }
-  #desktop-panel-shop:checked ~ .desktop-menu-open,
-  #desktop-panel-discover:checked ~ .desktop-menu-open,
+  #desktop-panel-close:checked ~ .desktop-menu-open {
+    transform: translateX(-100%);
+    transition: all 300ms ease;
+  }
+  #desktop-panel-close:checked ~ .desktop-overlay {
+    display: none;
+  }
+  body:has(#desktop-panel-shop:checked) {
+    overflow: hidden;
+  }
+  #desktop-panel-shop:checked ~ .desktop-menu-open {
+    transform: translateX(0%);
+    transition: all 300ms ease;
+  }
+  #desktop-panel-shop:checked ~ .desktop-menu-open .relative {
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+    height: 100%;
+  }
+  #desktop-panel-shop:checked ~ .desktop-menu-open .desktop-shop {
+    z-index: 8;
+  }
+  #desktop-panel-shop:checked ~ .navbar label[for=desktop-panel-shop] {
+    border-bottom: 3px solid rgb(29, 29, 29);
+  }
+  #desktop-panel-shop:checked ~ .desktop-overlay {
+    display: block;
+    opacity: 0.5;
+    transition: opacity 300ms ease;
+    pointer-events: auto;
+    z-index: 1;
+  }
+  body:has(#desktop-panel-discover:checked) {
+    overflow: hidden;
+  }
+  #desktop-panel-discover:checked ~ .desktop-menu-open {
+    transform: translateX(0%);
+    transition: all 300ms ease;
+  }
+  #desktop-panel-discover:checked ~ .desktop-menu-open .relative {
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+    height: 100%;
+  }
+  #desktop-panel-discover:checked ~ .desktop-menu-open .desktop-discover {
+    z-index: 8;
+  }
+  #desktop-panel-discover:checked ~ .navbar label[for=desktop-panel-discover] {
+    border-bottom: 3px solid rgb(29, 29, 29);
+  }
+  #desktop-panel-discover:checked ~ .desktop-overlay {
+    display: block;
+    opacity: 0.5;
+    transition: opacity 300ms ease;
+    pointer-events: auto;
+    z-index: 1;
+  }
+  body:has(#desktop-panel-help:checked) {
+    overflow: hidden;
+  }
   #desktop-panel-help:checked ~ .desktop-menu-open {
     transform: translateX(0%);
     transition: all 300ms ease;
   }
-  #desktop-panel-close:checked ~ .desktop-menu-open {
-    transform: translateX(-100%);
-    transition: all 300ms ease;
+  #desktop-panel-help:checked ~ .desktop-menu-open .relative {
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+    height: 100%;
+  }
+  #desktop-panel-help:checked ~ .desktop-menu-open .desktop-help {
+    z-index: 8;
+  }
+  #desktop-panel-help:checked ~ .navbar label[for=desktop-panel-help] {
+    border-bottom: 3px solid rgb(29, 29, 29);
+  }
+  #desktop-panel-help:checked ~ .desktop-overlay {
+    display: block;
+    opacity: 0.5;
+    transition: opacity 300ms ease;
+    pointer-events: auto;
+    z-index: 1;
   }
   .desktop-header {
     background-color: #ffcf00;
     display: block;
   }
   .desktop-header .desktop-menu-open {
-    position: relative;
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -1407,6 +1528,25 @@ footer {
     position: absolute;
     top: 30px;
     right: 40px;
+  }
+  .desktop-header .desktop-shop,
+  .desktop-header .desktop-discover,
+  .desktop-header .desktop-help {
+    z-index: 6;
+    position: absolute;
+    top: 130px;
+    left: 116px;
+    background-color: #fff;
+    width: 15rem;
+    height: 100%;
+    overflow: hidden;
+  }
+  .desktop-header .desktop-shop a,
+  .desktop-header .desktop-discover a,
+  .desktop-header .desktop-help a {
+    font-size: 0.9rem;
+    justify-content: space-between;
+    padding: 0.6rem 1.2rem;
   }
   .hero-logo-mobile {
     display: none;
@@ -1517,6 +1657,9 @@ footer {
   .top-bar-mobile .sign-join span {
     display: initial;
   }
+  .desktop-header .desktop-menu-open {
+    max-width: 50%;
+  }
   .membership-container ul {
     justify-content: space-between;
   }
@@ -1544,5 +1687,13 @@ footer {
   }
   .footer-big .dropdown-menu .links-wrapper h3 {
     margin-bottom: 1.7rem;
+  }
+}
+@media screen and (min-width: 100rem) {
+  .desktop-header .desktop-shop,
+  .desktop-header .desktop-discover,
+  .desktop-header .desktop-help {
+    left: auto;
+    right: 444px;
   }
 }/*# sourceMappingURL=style.css.map */

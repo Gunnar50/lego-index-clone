@@ -146,7 +146,7 @@
 					></label>
 
 					<!-- Nav Opened -->
-					<div class="mobile-overlay"></div>
+					<div class="mobile-overlay overlay"></div>
 					<div class="nav-open">
 						<div class="main-panel">
 							<div class="nav-open-top">
@@ -448,7 +448,7 @@
 						name="desktop-panel"
 						checked
 					/>
-
+					<div class="desktop-overlay overlay"></div>
 					<nav class="navbar flex-container">
 						<a href="/" class="brand">
 							<img src="/images/brand-lego.svg" />
@@ -460,12 +460,12 @@
 								</label>
 							</li>
 							<li class="nav-link">
-								<label for="desktop-panel-shop" class="label-cursor">
+								<label for="desktop-panel-discover" class="label-cursor">
 									DISCOVER
 								</label>
 							</li>
 							<li class="nav-link">
-								<label for="desktop-panel-shop" class="label-cursor">
+								<label for="desktop-panel-help" class="label-cursor">
 									HELP
 								</label>
 							</li>
@@ -479,15 +479,187 @@
 								<img class="svg svg-18" src="./images/svg/close.svg" />
 							</label>
 						</div>
-						<div class="desktop-shop"></div>
-						<div class="desktop-discover"></div>
-						<div class="desktop-help"></div>
+						<div class="desktop-shop">
+							<ul>
+								<li>
+									<a href="#" class="flex-center">
+										Sets by theme
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Ages
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Price ranges
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										LEGO Merchandise
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Interests
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Pick and Build
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Exclusive </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> New </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Bestsellers </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Home decor </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Offer &amp; Sale </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Gift Cards </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Coming soon </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Last chance to buy </a>
+								</li>
+							</ul>
+						</div>
+						<div class="desktop-discover">
+							<ul>
+								<li>
+									<a href="#" class="flex-center">
+										Our Values
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Our Apps
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Our Magazines
+										<img
+											class="svg svg-14"
+											src="./images/svg/arrow-right.svg"
+										/>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> All LEGO Themes </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> All LEGO Interests </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Adults Welcome </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> For Families </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; Insiders </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; Mosaic Maker </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> LEGO&reg; gift ideas </a>
+								</li>
+							</ul>
+						</div>
+						<div class="desktop-help">
+							<ul>
+								<li>
+									<a href="#" class="flex-center"> Check order status </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Delivery &amp; Returns </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Find a LEGO Store </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center">
+										Find Building Instructions
+									</a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Common questions </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Contact us </a>
+								</li>
+								<li>
+									<a href="#" class="flex-center"> Replace Parts </a>
+								</li>
+							</ul>
+						</div>
 					</div>
 
 					<div class="cart-container flex-center">
-						<div class="search-bar">
-							<img class="svg svg-18" src="./images/svg/magnifying-glass.svg" />
+						<input
+							type="checkbox"
+							id="search"
+							class="checkbox-button-general"
+						/>
+						<div class="search-container flex-center">
+							<div class="search-box">
+								<input type="text" placeholder="Search..." />
+							</div>
 						</div>
+						<label for="search" class="label-cursor">
+							<div class="search-bar">
+								<img
+									class="svg svg-18"
+									src="./images/svg/magnifying-glass.svg"
+								/></div
+						></label>
 
 						<div class="heart">
 							<img class="svg svg-18" src="/images/svg/heart.svg" />
@@ -548,12 +720,12 @@
 					<div class="hero-banner-button flex-container">
 						<a href="#" class="banner-button white-button flex-center"
 							><span>Shop now</span>
-							<img class="svg svg-16" src="/images/svg/arrow-right.svg" />
+							<i class="fa-solid fa-angle-right fa-xl"></i>
 						</a>
 						<a href="#" class="banner-button white-button flex-center"
 							><span>Learn more</span>
-							<img class="svg svg-16" src="/images/svg/arrow-right.svg"
-						/></a>
+							<i class="fa-solid fa-angle-right fa-xl"></i
+						></a>
 					</div>
 				</div>
 			</section>
@@ -867,8 +1039,8 @@
 						<div class="hero-banner-button flex-container">
 							<a href="#" class="banner-button white-button flex-center">
 								<span>Shop now</span>
-								<img class="svg svg-16" src="/images/svg/arrow-right.svg"
-							/></a>
+								<i class="fa-solid fa-angle-right fa-xl"></i
+							></a>
 						</div>
 					</div>
 				</div>
@@ -1133,7 +1305,7 @@
 								<i class="fa-solid fa-angle-right fa-xl"></i>
 							</a>
 
-							<a href="#" class="banner-button">
+							<a href="#" class="banner-button flex-center">
 								<span>Sign in</span>
 								<i class="fa-solid fa-angle-right fa-xl"></i
 							></a>
@@ -1172,12 +1344,12 @@
 						<div class="hero-banner-button flex-center">
 							<a href="#" class="banner-button white-button flex-center">
 								<span>Shop now</span>
-								<img class="svg svg-16" src="./images/svg/arrow-right.svg"
-							/></a>
+								<i class="fa-solid fa-angle-right fa-xl"></i
+							></a>
 							<a href="#" class="banner-button white-button flex-center">
 								<span>Learn now</span>
-								<img class="svg svg-16" src="./images/svg/arrow-right.svg"
-							/></a>
+								<i class="fa-solid fa-angle-right fa-xl"></i
+							></a>
 						</div>
 					</div>
 				</div>
@@ -1190,122 +1362,114 @@
 					<div class="recommendation-container">
 						<ul class="flex-container">
 							<!-- CARD 1 -->
-							<li>
-								<a href="#">
-									<div class="read-card">
-										<div class="img-area">
-											<img
-												src="./images/read/230808_Design_brief_Project_Speed_Card_Content.jpeg"
-											/>
-										</div>
-										<div class="card-details">
-											<h3 class="card-title">
-												Why the Concorde is an engineering masterpiece
-											</h3>
-											<p>
-												As the LEGO® Icons Concorde prepares for take-off, we
-												talked to the LEGO designer about what made the
-												supersonic jet so ahead of its time
-											</p>
-
-											<a href="#" class="read-more flex-center">
-												<span>Read more</span>
-												<img
-													class="svg svg-12"
-													src="./images/svg/arrow-right.svg"
-												/>
-											</a>
-										</div>
+							<li class="read-more-hover">
+								<div class="read-card">
+									<div class="img-area">
+										<img
+											src="./images/read/230808_Design_brief_Project_Speed_Card_Content.jpeg"
+										/>
 									</div>
-								</a>
+									<div class="card-details">
+										<h3 class="card-title">
+											Why the Concorde is an engineering masterpiece
+										</h3>
+										<p>
+											As the LEGO® Icons Concorde prepares for take-off, we
+											talked to the LEGO designer about what made the supersonic
+											jet so ahead of its time
+										</p>
+
+										<a href="#" class="read-more flex-center">
+											<span>Read more</span>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+											/>
+										</a>
+									</div>
+								</div>
 							</li>
 
 							<!-- CARD 2 -->
-							<li>
-								<a href="#">
-									<div class="read-card">
-										<div class="img-area">
-											<img
-												src="./images/read/230802_Design_brief_Project_Grub_Card_Content.jpeg"
-											/>
-										</div>
-										<div class="card-details">
-											<h3 class="card-title">
-												Bold and beautiful: Amazing Creatures in the new LEGO®
-												Ideas The Insect Collection
-											</h3>
-											<p>
-												Critical critters? Our expert explains how these small
-												but beautiful creatures are more crucial than you might
-												think...
-											</p>
-
-											<a href="#" class="read-more flex-center">
-												<span>Read more</span>
-												<img
-													class="svg svg-12"
-													src="./images/svg/arrow-right.svg"
-											/></a>
-										</div>
+							<li class="read-more-hover">
+								<div class="read-card">
+									<div class="img-area">
+										<img
+											src="./images/read/230802_Design_brief_Project_Grub_Card_Content.jpeg"
+										/>
 									</div>
-								</a>
+									<div class="card-details">
+										<h3 class="card-title">
+											Bold and beautiful: Amazing Creatures in the new LEGO®
+											Ideas The Insect Collection
+										</h3>
+										<p>
+											Critical critters? Our expert explains how these small but
+											beautiful creatures are more crucial than you might
+											think...
+										</p>
+
+										<a href="#" class="read-more flex-center">
+											<span>Read more</span>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
+									</div>
+								</div>
 							</li>
 
 							<!-- CARD 3 -->
-							<li>
-								<a href="#">
-									<div class="read-card">
-										<div class="img-area">
-											<img src="./images/read/Hero_Banner_-_Mobile.jpeg" />
-										</div>
-										<div class="card-details">
-											<h3 class="card-title">
-												Best Educational Toys for 2-Year-Olds
-											</h3>
-											<p>
-												Our educational toys are specially designed to help
-												improve shape recognition, critical thinking and key
-												skills in 2-year-olds while learning to build.
-											</p>
-
-											<a href="#" class="read-more flex-center">
-												<span>Read more</span>
-												<img
-													class="svg svg-12"
-													src="./images/svg/arrow-right.svg"
-											/></a>
-										</div>
+							<li class="read-more-hover">
+								<div class="read-card">
+									<div class="img-area">
+										<img src="./images/read/Hero_Banner_-_Mobile.jpeg" />
 									</div>
-								</a>
+									<div class="card-details">
+										<h3 class="card-title">
+											Best Educational Toys for 2-Year-Olds
+										</h3>
+										<p>
+											Our educational toys are specially designed to help
+											improve shape recognition, critical thinking and key
+											skills in 2-year-olds while learning to build.
+										</p>
+
+										<a href="#" class="read-more flex-center">
+											<span>Read more</span>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
+									</div>
+								</div>
 							</li>
 
 							<!-- CARD 4 -->
-							<li>
-								<a href="#">
-									<div class="read-card">
-										<div class="img-area">
-											<img src="./images/read/startwarsHERO_-_Mobile.jpeg" />
-										</div>
-										<div class="card-details">
-											<h3 class="card-title">
-												Best <i>Star Wars</i>&trade; Gift Ideas for Adults
-											</h3>
-											<p>
-												Use the power of the Force to give the greatest gifts in
-												the galaxy! These are some of the best
-												<i>Star Wars</i>&trade; gift ideas for adults that will
-												dominate their destiny.
-											</p>
-
-											<a href="#" class="read-more flex-center">
-												<span>Read more</span>
-												<img
-													class="svg svg-12"
-													src="./images/svg/arrow-right.svg"
-											/></a>
-										</div>
+							<li class="read-more-hover">
+								<div class="read-card">
+									<div class="img-area">
+										<img src="./images/read/startwarsHERO_-_Mobile.jpeg" />
 									</div>
-								</a>
+									<div class="card-details">
+										<h3 class="card-title">
+											Best <i>Star Wars</i>&trade; Gift Ideas for Adults
+										</h3>
+										<p>
+											Use the power of the Force to give the greatest gifts in
+											the galaxy! These are some of the best
+											<i>Star Wars</i>&trade; gift ideas for adults that will
+											dominate their destiny.
+										</p>
+
+										<a href="#" class="read-more flex-center">
+											<span>Read more</span>
+											<img
+												class="svg svg-12"
+												src="./images/svg/arrow-right.svg"
+										/></a>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>

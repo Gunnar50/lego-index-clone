@@ -101,6 +101,7 @@ a {
 }
 
 .checkbox-button-general {
+	display: none;
 	position: absolute;
 	opacity: 0;
 	z-index: -1;
@@ -230,7 +231,7 @@ header {
 
 // Burger animations
 
-.mobile-overlay {
+.overlay {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -569,18 +570,54 @@ body:has(.burger-menu-input:checked) {
 			margin-right: 30px;
 			font-weight: 500;
 			font-size: 1rem;
-			label:hover,
-			label:focus-within {
+			label:hover {
 				border-bottom: 3px solid rgb(29, 29, 29);
 			}
 		}
 	}
 	.cart-container {
+		z-index: 2;
 		gap: 30px;
 		.search-bar {
 			background-color: #fff;
 			padding: 0.8rem;
 			border-radius: 50%;
+		}
+	}
+}
+
+// SEARCH BOX ANIMATIONS
+.search-container {
+	position: relative;
+	height: 100%;
+	width: 20px;
+	.search-box {
+		input {
+			display: none;
+		}
+	}
+}
+#search:checked {
+	& ~ .search-container .search-box {
+		position: absolute;
+		background-color: #fff;
+		padding: 0.8rem 0.5rem;
+		border: 1px solid #00000085;
+		left: -237px;
+		width: 330px;
+		border-radius: 30px;
+		input {
+			display: block;
+			transform: translateX(40px);
+			border: none;
+			&:focus-visible {
+				outline: none;
+			}
+		}
+	}
+	& ~ .label-cursor {
+		.search-bar {
+			transform: translateX(-285px);
 		}
 	}
 }
@@ -792,13 +829,18 @@ body:has(.burger-menu-input:checked) {
 }
 
 .card-order-button {
+	cursor: pointer;
 	background-color: #fd8024;
+	border: 2px solid #fd8024;
 	width: 100%;
 	padding: 1rem;
 	font-size: 0.85rem;
 	font-weight: 600;
 	border-radius: 5px;
 	text-align: center;
+	&:hover {
+		background-color: #fff;
+	}
 }
 
 img[class="two-lines"] {
@@ -1032,6 +1074,7 @@ img[class="two-lines"] {
 		}
 	}
 }
+
 .read-more {
 	font-size: 0.9rem;
 	font-weight: 500;
@@ -1040,6 +1083,13 @@ img[class="two-lines"] {
 		line-height: 1.5;
 	}
 	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.read-more-hover {
+	cursor: pointer;
+	&:hover .read-more {
 		text-decoration: underline;
 	}
 }
@@ -1087,14 +1137,17 @@ footer {
 	}
 }
 .country {
+	display: block;
 	margin-bottom: 1rem;
 	img {
 		display: block;
 		width: 70px;
 		height: 70px;
 		margin-right: 1rem;
+		margin-bottom: 1.5rem;
 	}
 	a {
+		display: inline;
 		margin-bottom: 1.9rem;
 		align-items: center;
 		background-color: #18152d;
@@ -1222,6 +1275,7 @@ footer {
 			padding: 10px;
 			border-radius: 50%;
 			font-size: 1.1rem;
+			cursor: pointer;
 		}
 	}
 }
@@ -1234,7 +1288,7 @@ footer {
 		flex-wrap: wrap;
 		a {
 			color: #fff;
-			&hover {
+			&:hover {
 				text-decoration: underline;
 			}
 		}
